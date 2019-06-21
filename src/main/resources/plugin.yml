@@ -1,0 +1,6 @@
+name: ErisEssentials
+version: ${project.version}
+main: torchdevelopments.erisessentials.ErisEssentials
+api-version: 1.13
+authors: [Erisdar]
+description: Plugin for basic server functionality such as land protection, chest protection and player shops

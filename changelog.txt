@@ -1,0 +1,17 @@
+ErisEssentials Changelog
+
+The versions will run in the following format:
+
+## [MainRelease].[MinorRelease].[Bugfix] - Year-Month-Day
+
+[Added]
+[Changed]
+[Removed]
+[Fixed]
+----------------------------
+
+## 0.1.0 -2019-06-21
+### [Added]
+### [Changed]
+### [Removed]
+### [Fixed]
