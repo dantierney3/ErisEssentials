@@ -1,10 +1,9 @@
 package torchdevelopments.erisessentials.Core;
 
-import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
+import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomFarewell;
+import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomGreeting;
 import torchdevelopments.erisessentials.Core.Util.MultiPlayerSleep.MultiPlayerSleep;
 
 public final class ErisEssentials extends JavaPlugin{
@@ -23,6 +22,11 @@ public final class ErisEssentials extends JavaPlugin{
         // Register Multiplayer Sleep events
         System.out.println("[ErisEssentials] Registering Multiplayer Sleep Events");
         getServer().getPluginManager().registerEvents(new MultiPlayerSleep(), this);
+
+        // Register Custom Greeting events
+        System.out.println("[ErisEssentials] Registering Custom Greeting Events");
+        getServer().getPluginManager().registerEvents(new CustomGreeting(), this);
+        getServer().getPluginManager().registerEvents(new CustomFarewell(), this);
 
         // System message at the end of the startup process
         System.out.println("[ErisEssentials] ErisEssentials has finished loading!");

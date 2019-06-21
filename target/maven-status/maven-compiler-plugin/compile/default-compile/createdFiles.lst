@@ -5,3 +5,5 @@ torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.cla
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask$1.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.class
 torchdevelopments\erisessentials\Core\ErisEssentials.class
+torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
+torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.class

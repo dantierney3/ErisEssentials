@@ -13,6 +13,7 @@ The versions will run in the following format:
 ## 0.1.1 - 2019-06-21
 
 ### [Added]
+- Created custom welcome messages and leave messages for players
 
 ### [Changed]
 
