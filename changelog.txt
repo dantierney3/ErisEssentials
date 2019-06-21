@@ -10,8 +10,33 @@ The versions will run in the following format:
 [Fixed]
 ----------------------------
 
-## 0.1.0 -2019-06-21
+## 0.1.1 - 2019-06-21
+
 ### [Added]
+
 ### [Changed]
+
 ### [Removed]
+
+### [Fixed]
+- Compile Error caused by incorrect Java PATH
+- Compile error caused by incorrect Java version in POM
+- Stopped players from being able to trigger the sleep cycle during the day
+
+
+
+
+## 0.1.0 - 2019-06-19
+
+### [Added]
+
+- Added some console output message to show the start and end of startup and shutdown processes
+- Added event onBedEnter
+	This event will trigger when a player enters a bed at night. It will allow them to sleep, change the weather to rainy when they wake up,
+	and then back to clear to allow the weather system to be randomised.
+
+### [Changed]
+
+### [Removed]
+
 ### [Fixed]
