@@ -2,6 +2,7 @@ package torchdevelopments.erisessentials.Core;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import torchdevelopments.erisessentials.Core.Util.Commands.Fly;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomFarewell;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomGreeting;
 import torchdevelopments.erisessentials.Core.Util.MultiPlayerSleep.MultiPlayerSleep;
@@ -27,6 +28,10 @@ public final class ErisEssentials extends JavaPlugin{
         System.out.println("[ErisEssentials] Registering Custom Greeting Events");
         getServer().getPluginManager().registerEvents(new CustomGreeting(), this);
         getServer().getPluginManager().registerEvents(new CustomFarewell(), this);
+
+        // Register Custom Commands
+        System.out.println("[ErisEssentials] Registering Custom Commands");
+        getCommand("fly").setExecutor(new Fly());
 
         // System message at the end of the startup process
         System.out.println("[ErisEssentials] ErisEssentials has finished loading!");

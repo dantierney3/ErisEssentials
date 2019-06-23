@@ -9,8 +9,21 @@ The versions will run in the following format:
 [Removed]
 [Fixed]
 ----------------------------
+## 0.02.0 - 2019-06-23
 
-## 0.1.1 - 2019-06-21
+### [Added]
+- Custom Fly command that allows server operators to grant players flight in survival
+
+### [Changed]
+- Time for player sleep to set time to day has been increased from 100 game ticks (5 seconds) to 200 game ticks (10 seconds)
+
+### [Removed]
+
+### [Fixed]
+
+
+
+## 0.01.1 - 2019-06-21
 
 ### [Added]
 - Created custom welcome messages and leave messages for players
@@ -27,7 +40,7 @@ The versions will run in the following format:
 
 
 
-## 0.1.0 - 2019-06-19
+## 0.01.0 - 2019-06-19
 
 ### [Added]
 

@@ -37,13 +37,16 @@ public class MultiPlayerSleep implements Listener
                 @Override
                 public void run()
                 {
-                    // What you want to schedule goes here
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time set day");
-                    RainTask.weatherToRain();
-                    ClearTask.weatherToClear();
+                    if(player.isSleeping())
+                    {
+                        // What you want to schedule goes here
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time set 0");
+                        RainTask.weatherToRain();
+                        ClearTask.weatherToClear();
+                    }
                 }
 
-            }.runTaskLater(plugin, 100);
+            }.runTaskLater(plugin, 200);
 
         }
 
