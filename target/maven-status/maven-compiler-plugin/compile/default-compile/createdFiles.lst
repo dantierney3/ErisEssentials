@@ -1,10 +1,12 @@
-torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep$1.class
-torchdevelopments\erisessentials\Core\Util\Commands\Fly.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask$1.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.class
+torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
+torchdevelopments\erisessentials\Core\Util\Commands\AFK\Afk.class
+torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.class
+torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep$1.class
+torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMove.class
+torchdevelopments\erisessentials\Core\Util\Commands\Fly.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask$1.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.class
 torchdevelopments\erisessentials\Core\ErisEssentials.class
-torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
-torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.class

@@ -7,3 +7,5 @@ description: Plugin for basic server functionality such as land protection, ches
 commands:
   fly:
     description: Make youtself fly!
+  afk:
+    description: Make yourself safe whilst you're afk!

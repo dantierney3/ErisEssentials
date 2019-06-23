@@ -13,6 +13,10 @@ The versions will run in the following format:
 
 ### [Added]
 - Custom Fly command that allows server operators to grant players flight in survival
+- Custom AFK command - This command makes the player invulnerable but also unable to move whilst afk
+- onPlayerMoveAFK event handler checks all players that are afk and cancels their movement
+- AFK command is now toggleable
+- Fly command is now toggleable
 
 ### [Changed]
 - Time for player sleep to set time to day has been increased from 100 game ticks (5 seconds) to 200 game ticks (10 seconds)
@@ -20,6 +24,7 @@ The versions will run in the following format:
 ### [Removed]
 
 ### [Fixed]
+- Multiplayer sleep event cancelled if player leaves bed before the timer executes the time set day command
 
 
 
