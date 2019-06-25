@@ -14,3 +14,5 @@ commands:
     Aliases: [enderchest]
   inv:
     description: View a target player's inventory
+  broadcast:
+    description: Broadcast a message to the server

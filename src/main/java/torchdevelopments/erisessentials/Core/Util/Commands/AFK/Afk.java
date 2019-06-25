@@ -35,6 +35,14 @@ public class Afk implements CommandExecutor {
             }
 
             player.setDisplayName(ChatColor.stripColor(player.getDisplayName()));
+            player.setPlayerListName(ChatColor.stripColor(player.getPlayerListName()));
+
+            if(player.getUniqueId() == Bukkit.getPlayerUniqueId("Erisdar"))
+            {
+                player.setDisplayName(ChatColor.GOLD + player.getDisplayName()+ ChatColor.WHITE);
+                player.setPlayerListName(ChatColor.GOLD + player.getPlayerListName() + ChatColor.WHITE);
+            }
+            
             player.sendMessage(ChatColor.GRAY + "You are no longer AFK!");
             System.out.println(player.getDisplayName() + " is no longer AFK");
         }
@@ -49,6 +57,7 @@ public class Afk implements CommandExecutor {
 
             afkPlayers.add(player);
             player.setDisplayName(ChatColor.GRAY + player.getDisplayName());
+            player.setPlayerListName(ChatColor.GRAY + player.getPlayerListName());
 
             player.sendMessage(ChatColor.GRAY + "You are now AFK!");
             System.out.println(player.getDisplayName() + " went AFK");

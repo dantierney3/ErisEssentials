@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a72db8f-f776-4bf2-96af-582c934c3004" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ErisEssentials-0.03.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ErisEssentials-0.03.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ErisEssentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ErisEssentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-ErisEssentials-0.03.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-ErisEssentials-0.03.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="38" column="62" lean-forward="true" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+            <state relative-caret-position="289">
+              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,8 +44,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="289">
+              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -63,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="38" column="78" lean-forward="true" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+            <state relative-caret-position="367">
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="34" column="121" lean-forward="true" selection-start-line="34" selection-start-column="121" selection-end-line="34" selection-end-column="121" />
+              <caret line="34" column="121" selection-start-line="34" selection-start-column="121" selection-end-line="34" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,10 +117,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="571">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/SleepTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomFarewell.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomWelcome.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Lands/LeftClickEventHandler.java" />
@@ -151,10 +170,12 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/CustomInventory/InventoryCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/InventoryCommand.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/PlayerInventory/ViewPlayerInventory.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" />
       </list>
     </option>
@@ -244,6 +265,16 @@
               <item name="Core" type="462c0819:PsiDirectoryNode" />
               <item name="Util" type="462c0819:PsiDirectoryNode" />
               <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomGreetings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
@@ -395,16 +426,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomWelcome.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Lands/LeftClickEventHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="99" selection-start-line="14" selection-start-column="99" selection-end-line="14" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ErisEssentials.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -580,34 +601,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="38" column="62" lean-forward="true" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+        <state relative-caret-position="425">
+          <caret line="34" column="121" selection-start-line="34" selection-start-column="121" selection-end-line="34" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="121" lean-forward="true" selection-start-line="34" selection-start-column="121" selection-end-line="34" selection-end-column="121" />
+        <state relative-caret-position="289">
+          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -624,10 +641,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="38" column="78" lean-forward="true" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+        <state relative-caret-position="367">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

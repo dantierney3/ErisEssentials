@@ -1,5 +1,6 @@
 package torchdevelopments.erisessentials.Core.Util.CustomGreetings;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,5 +14,11 @@ public class CustomGreeting implements Listener {
     {
         Player player = e.getPlayer();
         e.setJoinMessage("Welcome back to the Server " + ChatColor.GOLD + player.getDisplayName());
+
+        if(player.getUniqueId() == Bukkit.getPlayerUniqueId("Erisdar"))
+        {
+            player.setDisplayName(ChatColor.GOLD + player.getDisplayName()+ ChatColor.WHITE);
+            player.setPlayerListName(ChatColor.GOLD + player.getPlayerListName() + ChatColor.WHITE);
+        }
     }
 }
