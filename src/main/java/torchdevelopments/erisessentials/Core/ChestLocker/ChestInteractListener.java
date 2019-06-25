@@ -11,6 +11,8 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.Plugin;
 
+import java.util.UUID;
+
 public class ChestInteractListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
@@ -35,10 +37,18 @@ public class ChestInteractListener implements Listener {
                 String lockedChest;
                 lockedChest = (String) plugin.getConfig().get(location);
 
-                p.sendMessage(code);
-                p.sendMessage(lockedChest);
+                if(p.isOp() && !code.contentEquals(lockedChest))
+                {
+                    UUID uuid = UUID.fromString(lockedChest);
+                    Player target = Bukkit.getServer().getPlayer(uuid);
+                    if(target != null)
+                    {
+                        String name = target.getDisplayName();
+                        p.sendMessage(ChatColor.RED + "This is " + ChatColor.GOLD + name +  "'s " + ChatColor.RED + "chest");
+                    }
 
-                if(!code.contentEquals(lockedChest))
+                }
+                else if(!code.contentEquals(lockedChest))
                 {
                     e.setCancelled(true);
                     p.sendMessage(ChatColor.RED + "This is not your chest!");

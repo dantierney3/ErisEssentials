@@ -13,6 +13,8 @@ The versions will run in the following format:
 
 ### [Added]
 - Added a listener that protects chests that are placed by players
+- Server Ops can access any chest, chests that arent their's show the owner in chat
+	[BUG] Double chests can have two owners
 
 ### [Changed]
 

@@ -1,5 +1,5 @@
 name: ErisEssentials
-version: 0.03.0-SNAPSHOT
+version: 0.1.0-SNAPSHOT
 main: torchdevelopments.erisessentials.Core.ErisEssentials
 api-version: 1.13
 authors: [Erisdar]

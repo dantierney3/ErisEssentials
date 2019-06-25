@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a72db8f-f776-4bf2-96af-582c934c3004" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ErisEssentials-0.03.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-ErisEssentials-0.03.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,14 +56,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+            <state relative-caret-position="401">
+              <caret line="46" column="100" selection-start-line="46" selection-start-column="100" selection-end-line="46" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -109,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestProtect/Entity/Chest.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/CustomInventory/InventoryCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/InventoryCommand.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/PlayerInventory/ViewPlayerInventory.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
@@ -119,6 +132,7 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/ChestListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -272,7 +286,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" weight="0.1913646" />
@@ -283,7 +296,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20043337" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20043337" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -612,11 +618,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/ChestInteractListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+        <state relative-caret-position="401">
+          <caret line="46" column="100" selection-start-line="46" selection-start-column="100" selection-end-line="46" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
