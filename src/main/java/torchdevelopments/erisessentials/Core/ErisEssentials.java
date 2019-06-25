@@ -3,6 +3,7 @@ package torchdevelopments.erisessentials.Core;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
+import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
 import torchdevelopments.erisessentials.Core.Util.Commands.Fly;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomFarewell;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomGreeting;
@@ -34,6 +35,7 @@ public final class ErisEssentials extends JavaPlugin{
         System.out.println("[ErisEssentials] Registering Custom Commands");
         getCommand("fly").setExecutor(new Fly());
         getCommand("afk").setExecutor(new Afk());
+        getCommand("ec").setExecutor(new EnderChestCommand());
 
         // System message at the end of the startup process
         System.out.println("[ErisEssentials] ErisEssentials has finished loading!");

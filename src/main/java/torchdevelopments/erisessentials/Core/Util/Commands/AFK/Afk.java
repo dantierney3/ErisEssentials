@@ -25,6 +25,7 @@ public class Afk implements CommandExecutor {
         if(afkPlayers.contains(player))
         {
             player.setInvulnerable(false);
+            player.setCollidable(true);
 
             afkPlayers.remove(player);
 
@@ -38,6 +39,7 @@ public class Afk implements CommandExecutor {
         else if (!afkPlayers.contains(player))
         {
             player.setInvulnerable(true);
+            player.setCollidable(false);
             if (afkPlayers.isEmpty())
             {
                 Bukkit.getServer().getPluginManager().registerEvents(new onPlayerMoveAFK(), plugin);

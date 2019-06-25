@@ -1,5 +1,5 @@
 name: ErisEssentials
-version: 0.1.1-SNAPSHOT
+version: 0.03.0-SNAPSHOT
 main: torchdevelopments.erisessentials.Core.ErisEssentials
 api-version: 1.13
 authors: [Erisdar]
@@ -9,3 +9,6 @@ commands:
     description: Make youtself fly!
   afk:
     description: Make yourself safe whilst you're afk!
+  ec:
+    description: Open your Ender Chest
+    Aliases: [enderchest]
