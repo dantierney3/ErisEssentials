@@ -1,7 +1,10 @@
 package torchdevelopments.erisessentials.Core;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import torchdevelopments.erisessentials.Core.ChestLocker.ChestInteractListener;
+import torchdevelopments.erisessentials.Core.ChestLocker.ChestListener;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
 import torchdevelopments.erisessentials.Core.Util.Commands.Broadcast.Broadcast;
 import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
@@ -24,6 +27,9 @@ public final class ErisEssentials extends JavaPlugin{
 
         // Startup process and console outputs to be entered here
 
+        // Load Config
+        Bukkit.getServer().getPluginManager().getPlugin("ErisEssentials").saveDefaultConfig();
+
         // Register Multiplayer Sleep events
         System.out.println("[ErisEssentials] Registering Multiplayer Sleep Events");
         getServer().getPluginManager().registerEvents(new MultiPlayerSleep(), this);
@@ -32,6 +38,10 @@ public final class ErisEssentials extends JavaPlugin{
         System.out.println("[ErisEssentials] Registering Custom Greeting Events");
         getServer().getPluginManager().registerEvents(new CustomGreeting(), this);
         getServer().getPluginManager().registerEvents(new CustomFarewell(), this);
+
+        // Register ChestLocker
+        getServer().getPluginManager().registerEvents(new ChestListener(), this);
+        getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
 
         // Register Custom Commands
         System.out.println("[ErisEssentials] Registering Custom Commands");

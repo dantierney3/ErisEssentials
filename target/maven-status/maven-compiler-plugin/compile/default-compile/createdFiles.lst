@@ -4,7 +4,9 @@ torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.cla
 torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerInventory.class
 torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
 torchdevelopments\erisessentials\Core\Util\Commands\AFK\Afk.class
+torchdevelopments\erisessentials\Core\ChestLocker\ChestListener.class
 torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.class
+torchdevelopments\erisessentials\Core\ChestLocker\ChestInteractListener.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep$1.class
 torchdevelopments\erisessentials\Core\Util\Commands\Broadcast\Broadcast.class
 torchdevelopments\erisessentials\Core\Util\Commands\Fly.class

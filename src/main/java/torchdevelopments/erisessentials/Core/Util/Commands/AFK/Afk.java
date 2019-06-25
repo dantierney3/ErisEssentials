@@ -42,7 +42,7 @@ public class Afk implements CommandExecutor {
                 player.setDisplayName(ChatColor.GOLD + player.getDisplayName()+ ChatColor.WHITE);
                 player.setPlayerListName(ChatColor.GOLD + player.getPlayerListName() + ChatColor.WHITE);
             }
-            
+
             player.sendMessage(ChatColor.GRAY + "You are no longer AFK!");
             System.out.println(player.getDisplayName() + " is no longer AFK");
         }

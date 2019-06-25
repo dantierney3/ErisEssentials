@@ -9,6 +9,17 @@ The versions will run in the following format:
 [Removed]
 [Fixed]
 ----------------------------
+## 0.1.0 - 2019-06-25
+
+### [Added]
+- Added a listener that protects chests that are placed by players
+
+### [Changed]
+
+### [Removed]
+
+### [Fixed]
+
 ## 0.03.0 - 2019-06-25
 
 ### [Added]
