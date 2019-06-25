@@ -32,10 +32,11 @@ public class EnderChestCommand implements CommandExecutor {
                         // Gets the target's Ender Chest
                         Inventory inv = target.getEnderChest();
                         p.sendMessage(ChatColor.RED + "Openining " + ChatColor.GOLD + target.getDisplayName() + "'s " + ChatColor.RED + "Ender Chest...");
+                        System.out.println(p.getDisplayName() + " opened " + target.getDisplayName() + "'s Ender Chest");
                         p.openInventory(inv);
 
                     }
-                    else
+                    else // If the player doesnt provide a target, it will open their ender chest
                     {
                         Inventory inv = p.getEnderChest();
                         p.sendMessage(ChatColor.RED + "Opening your Ender Chest...");

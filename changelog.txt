@@ -13,8 +13,12 @@ The versions will run in the following format:
 
 ### [Added]
 - Allow Server Ops to access other player Ender Chests to deal with theft on servers
+- Allow Server Ops to access other player inventories to deal with theft on servers
+- Allow players to access their ender chest from anywhere
 
 ### [Changed]
+- AFk commands now output a message to the console for logging purposes
+- AFK command now changes player names to Gray when a player is AFK
 
 ### [Removed]
 

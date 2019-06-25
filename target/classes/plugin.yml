@@ -12,3 +12,5 @@ commands:
   ec:
     description: Open your Ender Chest
     Aliases: [enderchest]
+  inv:
+    description: View a target player's inventory

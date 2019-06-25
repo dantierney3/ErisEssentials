@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
 import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
 import torchdevelopments.erisessentials.Core.Util.Commands.Fly;
+import torchdevelopments.erisessentials.Core.Util.Commands.PlayerInventory.ViewPlayerInventory;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomFarewell;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomGreeting;
 import torchdevelopments.erisessentials.Core.Util.MultiPlayerSleep.MultiPlayerSleep;
@@ -36,6 +37,7 @@ public final class ErisEssentials extends JavaPlugin{
         getCommand("fly").setExecutor(new Fly());
         getCommand("afk").setExecutor(new Afk());
         getCommand("ec").setExecutor(new EnderChestCommand());
+        getCommand("inv").setExecutor(new ViewPlayerInventory());
 
         // System message at the end of the startup process
         System.out.println("[ErisEssentials] ErisEssentials has finished loading!");

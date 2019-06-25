@@ -34,7 +34,9 @@ public class Afk implements CommandExecutor {
                 HandlerList.unregisterAll(new onPlayerMoveAFK());
             }
 
+            player.setDisplayName(ChatColor.stripColor(player.getDisplayName()));
             player.sendMessage(ChatColor.GRAY + "You are no longer AFK!");
+            System.out.println(player.getDisplayName() + " is no longer AFK");
         }
         else if (!afkPlayers.contains(player))
         {
@@ -46,8 +48,10 @@ public class Afk implements CommandExecutor {
             }
 
             afkPlayers.add(player);
+            player.setDisplayName(ChatColor.GRAY + player.getDisplayName());
 
             player.sendMessage(ChatColor.GRAY + "You are now AFK!");
+            System.out.println(player.getDisplayName() + " went AFK");
         }
 
         return false;
