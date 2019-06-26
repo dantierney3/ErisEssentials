@@ -32,16 +32,24 @@ public class ChestListener implements Listener {
             location += Integer.toString(y);
             location += Integer.toString(z);
 
-            System.out.println(location);
-            System.out.println(code);
-
             if(plugin.getConfig().contains(location))
             {
-                return;
+                if(plugin.getConfig().get(location) == null)
+                {
+                    plugin.getConfig().set(location,code);
+                    plugin.saveConfig();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                plugin.getConfig().set(location,code);
+                plugin.saveConfig();
             }
 
-            plugin.getConfig().set(location,code);
-            plugin.saveConfig();
         }
 
     }

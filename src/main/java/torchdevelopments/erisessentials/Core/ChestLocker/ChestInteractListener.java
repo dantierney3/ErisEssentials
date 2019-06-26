@@ -34,24 +34,35 @@ public class ChestInteractListener implements Listener {
                 location += Integer.toString(y);
                 location += Integer.toString(z);
 
-                String lockedChest;
-                lockedChest = (String) plugin.getConfig().get(location);
-
-                if(p.isOp() && !code.contentEquals(lockedChest))
+                if (plugin.getConfig().contains(location))
                 {
-                    UUID uuid = UUID.fromString(lockedChest);
-                    Player target = Bukkit.getServer().getPlayer(uuid);
-                    if(target != null)
+                    String lockedChest;
+                    lockedChest = (String) plugin.getConfig().get(location);
+
+                    if(p.isOp() && !code.contentEquals(lockedChest))
                     {
-                        String name = target.getDisplayName();
-                        p.sendMessage(ChatColor.RED + "This is " + ChatColor.GOLD + name +  "'s " + ChatColor.RED + "chest");
-                    }
+                        UUID uuid = UUID.fromString(lockedChest);
+                        Player target = Bukkit.getServer().getPlayer(uuid);
+                        if(target != null)
+                        {
+                            String name = target.getDisplayName();
+                            p.sendMessage(ChatColor.RED + "This is " + ChatColor.GOLD + name +  "'s " + ChatColor.RED + "chest");
+                        }
+                        else
+                        {
+                            p.sendMessage(ChatColor.RED + "This is " + ChatColor.GOLD + "Someone's " + ChatColor.RED + "chest");
+                        }
 
+                    }
+                    else if(!code.contentEquals(lockedChest))
+                    {
+                        e.setCancelled(true);
+                        p.sendMessage(ChatColor.RED + "This is not your chest!");
+                    }
                 }
-                else if(!code.contentEquals(lockedChest))
+                else
                 {
-                    e.setCancelled(true);
-                    p.sendMessage(ChatColor.RED + "This is not your chest!");
+                    p.sendMessage(ChatColor.RED + "This chest is unprotected!");
                 }
             }
         }

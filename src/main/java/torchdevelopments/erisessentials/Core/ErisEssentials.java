@@ -3,6 +3,7 @@ package torchdevelopments.erisessentials.Core;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import torchdevelopments.erisessentials.Core.ChestLocker.ChestBreakListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.ChestInteractListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.ChestListener;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
@@ -42,6 +43,7 @@ public final class ErisEssentials extends JavaPlugin{
         // Register ChestLocker
         getServer().getPluginManager().registerEvents(new ChestListener(), this);
         getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
+        getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
 
         // Register Custom Commands
         System.out.println("[ErisEssentials] Registering Custom Commands");
