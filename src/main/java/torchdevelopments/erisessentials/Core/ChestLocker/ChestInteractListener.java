@@ -46,11 +46,11 @@ public class ChestInteractListener implements Listener {
                         if(target != null)
                         {
                             String name = target.getDisplayName();
-                            p.sendMessage(ChatColor.RED + "This is " + ChatColor.GOLD + name +  "'s " + ChatColor.RED + "chest");
+                            p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + name +  "'s " + ChatColor.BLUE + "chest");
                         }
                         else
                         {
-                            p.sendMessage(ChatColor.RED + "This is " + ChatColor.GOLD + "Someone's " + ChatColor.RED + "chest");
+                            p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + "Someone's " + ChatColor.BLUE + "chest");
                         }
 
                     }

@@ -8,13 +8,29 @@ The versions will run in the following format:
 [Changed]
 [Removed]
 [Fixed]
+
+When referring to ticks, it means game ticks (20 ticks per second), not redstone ticks (10 ticks per second).
+
 ----------------------------
-## 0.1.0 - 2019-06-25
+## 0.11.0 = 2019-06-26
+
+### [Added]
+- Chests can only be removed by the owner or by a server Op
+
+### [Changed]
+
+### [Removed]
+
+### [Fixed]
+- Once a chest is destroyed, the UUID tied to its location is nullified, allowing a differnet player to place their chest and protect it there
+- Chests without protection (placed before plugin) cause a NullPointerException
+
+
+## 0.10.0 - 2019-06-25
 
 ### [Added]
 - Added a listener that protects chests that are placed by players
 - Server Ops can access any chest, chests that arent their's show the owner in chat
-	[BUG] Double chests can have two owners
 
 ### [Changed]
 
@@ -66,6 +82,10 @@ The versions will run in the following format:
 
 ### [Added]
 - Created custom welcome messages and leave messages for players
+- Command for server ops to add protection to chests
+- Command for server ops to change chest owner
+- Command for server ops to hide themselves from other players
+- Command for server ops to remove protection from a chest
 
 ### [Changed]
 

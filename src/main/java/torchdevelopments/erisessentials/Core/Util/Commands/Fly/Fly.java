@@ -1,4 +1,4 @@
-package torchdevelopments.erisessentials.Core.Util.Commands;
+package torchdevelopments.erisessentials.Core.Util.Commands.Fly;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
