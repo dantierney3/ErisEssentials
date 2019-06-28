@@ -20,6 +20,7 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 
 ### [Changed]
 - Changed the command structure for chest protection
+- Command feedback color for some commands set to blue rather than red
 
 ### [Removed]
 - Old chest protection command classes
