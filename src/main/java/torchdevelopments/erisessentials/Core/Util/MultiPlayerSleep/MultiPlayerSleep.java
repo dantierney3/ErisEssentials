@@ -39,8 +39,11 @@ public class MultiPlayerSleep implements Listener
                 {
                     if(player.isSleeping())
                     {
-                        // What you want to schedule goes here
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time set 0");
+                        int time = Integer.valueOf(Long.toString(player.getWorld().getTime()));
+                        time = 23500 - time;
+                        String timeToAdd = Integer.toString(time);
+                        // time add not time set to ensure that the game passes to the next day
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time add " + timeToAdd);
                         RainTask.weatherToRain();
                         ClearTask.weatherToClear();
                     }

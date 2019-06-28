@@ -6,9 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import torchdevelopments.erisessentials.Core.ChestLocker.ChestBreakListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.ChestInteractListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.ChestListener;
-import torchdevelopments.erisessentials.Core.ChestLocker.Commands.ProtectChest;
-import torchdevelopments.erisessentials.Core.ChestLocker.Commands.RemoveProtection;
-import torchdevelopments.erisessentials.Core.ChestLocker.Commands.SetOwner;
+import torchdevelopments.erisessentials.Core.ChestLocker.Commands.*;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
 import torchdevelopments.erisessentials.Core.Util.Commands.Broadcast.Broadcast;
 import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
@@ -50,9 +48,7 @@ public final class ErisEssentials extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
         getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
 
-        getCommand("chestSetOwner").setExecutor(new SetOwner());
-        getCommand("chestSetProtected").setExecutor(new ProtectChest());
-        getCommand("chestRemoveProtection").setExecutor(new RemoveProtection());
+        getCommand("chest").setExecutor(new ErisChest());
 
         // Register Custom Commands
         System.out.println("[ErisEssentials] Registering Custom Commands");

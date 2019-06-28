@@ -16,11 +16,7 @@ commands:
     description: View a target player's inventory
   broadcast:
     description: Broadcast a message to the server
-  chestSetOwner:
-    decription: Change a chest's owner
-  chestSetProtected:
-    description: Make a chest protected
-  chestRemoveProtection:
-    description: Remove protection from a chest
+  chest:
+    description: New command to handle chest protection
   invisible:
       description: Make yourself invisible

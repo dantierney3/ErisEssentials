@@ -31,7 +31,7 @@ public class EnderChestCommand implements CommandExecutor {
                         Player target = Bukkit.getPlayerExact(args[0]);
                         // Gets the target's Ender Chest
                         Inventory inv = target.getEnderChest();
-                        p.sendMessage(ChatColor.RED + "Openining " + ChatColor.GOLD + target.getDisplayName() + "'s " + ChatColor.RED + "Ender Chest...");
+                        p.sendMessage(ChatColor.BLUE + "Openining " + ChatColor.GOLD + target.getDisplayName() + "'s " + ChatColor.BLUE + "Ender Chest...");
                         System.out.println(p.getDisplayName() + " opened " + target.getDisplayName() + "'s Ender Chest");
                         p.openInventory(inv);
 
@@ -39,7 +39,7 @@ public class EnderChestCommand implements CommandExecutor {
                     else // If the player doesnt provide a target, it will open their ender chest
                     {
                         Inventory inv = p.getEnderChest();
-                        p.sendMessage(ChatColor.RED + "Opening your Ender Chest...");
+                        p.sendMessage(ChatColor.BLUE + "Opening your Ender Chest...");
                         p.openInventory(inv);
                     }
                 }
@@ -52,7 +52,7 @@ public class EnderChestCommand implements CommandExecutor {
                     else
                     {
                         Inventory inv = p.getEnderChest();
-                        p.sendMessage(ChatColor.RED + "Opening your Ender Chest...");
+                        p.sendMessage(ChatColor.BLUE + "Opening your Ender Chest...");
                         p.openInventory(inv);
                     }
 

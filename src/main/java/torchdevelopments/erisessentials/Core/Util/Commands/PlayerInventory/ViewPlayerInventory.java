@@ -22,7 +22,7 @@ public class ViewPlayerInventory implements CommandExecutor {
                 {
                     Player target = Bukkit.getPlayerExact(args[0]);
                     Inventory inv = target.getInventory();
-                    p.sendMessage(ChatColor.RED + "Opening " + ChatColor.GOLD + target.getDisplayName() + "'s " + ChatColor.RED + "inventory...");
+                    p.sendMessage(ChatColor.BLUE + "Opening " + ChatColor.GOLD + target.getDisplayName() + "'s " + ChatColor.BLUE + "inventory...");
                     System.out.println(p.getDisplayName() + " opened " + target.getDisplayName() + "'s inventory");
                     p.openInventory(inv);
                 }

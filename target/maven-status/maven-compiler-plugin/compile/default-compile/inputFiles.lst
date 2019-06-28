@@ -5,13 +5,10 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\C
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\EnderChest\EnderChestCommand.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMoveAFK.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.java
-D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Commands\RemoveProtection.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ErisEssentials.java
-D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Commands\SetOwner.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\FurnaceLocker\FurnaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.java
-D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Commands\ProtectChest.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Broadcast\Broadcast.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerInventory.java
@@ -19,3 +16,4 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestL
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\HopperLocker\HopperListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Fly\Fly.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Invisible\Invisibility.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Commands\ErisChest.java

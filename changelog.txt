@@ -12,6 +12,22 @@ The versions will run in the following format:
 When referring to ticks, it means game ticks (20 ticks per second), not redstone ticks (10 ticks per second).
 
 ----------------------------
+## 0.2.0 - 2019-06-28
+
+### [Added] 
+- Players can now remove protection from their own chests
+- players can now change the owner of their own chests
+
+### [Changed]
+- Changed the command structure for chest protection
+
+### [Removed]
+- Old chest protection command classes
+
+### [Fixed]
+- The game day is no longer being kept at 0 due to multiplayer sleep
+
+
 ## 0.11.0 = 2019-06-26
 
 ### [Added]

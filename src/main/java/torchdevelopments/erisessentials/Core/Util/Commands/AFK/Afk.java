@@ -44,6 +44,13 @@ public class Afk implements CommandExecutor {
             }
 
             player.sendMessage(ChatColor.GRAY + "You are no longer AFK!");
+            for (Player players : Bukkit.getOnlinePlayers())
+            {
+                if(players != player)
+                {
+                    players.sendMessage(ChatColor.GOLD + player.getDisplayName() + ChatColor.BLUE + " is no longer AFK!");
+                }
+            }
             System.out.println(player.getDisplayName() + " is no longer AFK");
         }
         else if (!afkPlayers.contains(player))
@@ -56,10 +63,19 @@ public class Afk implements CommandExecutor {
             }
 
             afkPlayers.add(player);
+
+            for (Player players : Bukkit.getOnlinePlayers())
+            {
+                if(players != player)
+                {
+                    players.sendMessage(ChatColor.GOLD + player.getDisplayName() + ChatColor.BLUE + " is now AFK!");
+                }
+            }
             player.setDisplayName(ChatColor.GRAY + player.getDisplayName());
             player.setPlayerListName(ChatColor.GRAY + player.getPlayerListName());
 
             player.sendMessage(ChatColor.GRAY + "You are now AFK!");
+
             System.out.println(player.getDisplayName() + " went AFK");
         }
 

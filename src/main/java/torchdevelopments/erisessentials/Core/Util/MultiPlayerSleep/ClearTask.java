@@ -12,13 +12,13 @@ public class ClearTask {
         Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("ErisEssentials");
 
         new BukkitRunnable()
+    {
+        @Override
+        public void run()
         {
-            @Override
-            public void run()
-            {
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "weather clear");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "weather clear 12000");
 
-            }
-        }.runTaskLater(plugin, 100);
+        }
+    }.runTaskLater(plugin, 100);
     }
 }
