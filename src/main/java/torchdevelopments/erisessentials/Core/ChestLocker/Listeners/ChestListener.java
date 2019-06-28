@@ -1,6 +1,7 @@
-package torchdevelopments.erisessentials.Core.ChestLocker;
+package torchdevelopments.erisessentials.Core.ChestLocker.Listeners;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -22,7 +23,7 @@ public class ChestListener implements Listener {
             Player p = e.getPlayer();
             Location loc = e.getBlockPlaced().getLocation();
 
-            String code = p.getUniqueId().toString();
+            String uuid = p.getUniqueId().toString();
 
             int x = loc.getBlockX();
             int y = loc.getBlockY();
@@ -31,12 +32,15 @@ public class ChestListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
+            location = "chest." + location;
 
             if(plugin.getConfig().contains(location))
             {
                 if(plugin.getConfig().get(location) == null)
                 {
-                    plugin.getConfig().set(location,code);
+                    plugin.getConfig().set(location + ".owner",uuid);
+                    plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
+                    plugin.getConfig().set(location + ".isPublic", false);
                     plugin.saveConfig();
                 }
                 else
@@ -46,7 +50,9 @@ public class ChestListener implements Listener {
             }
             else
             {
-                plugin.getConfig().set(location,code);
+                plugin.getConfig().set(location + ".owner",uuid);
+                plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
+                plugin.getConfig().set(location + ".isPublic", false);
                 plugin.saveConfig();
             }
 

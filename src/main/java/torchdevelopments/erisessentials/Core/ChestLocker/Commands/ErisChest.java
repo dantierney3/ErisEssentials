@@ -41,17 +41,16 @@ public class ErisChest implements CommandExecutor {
                                 case "owner":
                                     chestSetOwner(p, args);
                                     break;
-                            }
-                            break;
-
-                        case "remove":
-                            switch(args[1])
-                            {
-                                case "owner":
-                                    chestRemoveOwner(p,args);
+                                case "public":
+                                    chestSetPublic(p, args);
+                                    break;
+                                case "private":
+                                    chestSetPrivate(p,args);
                                     break;
                             }
                             break;
+
+
                     }
                 } // End if
                 else
@@ -78,9 +77,11 @@ public class ErisChest implements CommandExecutor {
 
     private void chestSetOwner(Player p, String[] args)
     {
+
+        String location = getTargetChest(p);
+
         if(p.isOp())
         {
-            String location = getTargetChest(p);
 
             Player target = Bukkit.getPlayerExact(args[2]);
 
@@ -95,49 +96,64 @@ public class ErisChest implements CommandExecutor {
         }
         else
         {
-            String location = getTargetChest(p);
             Player target = Bukkit.getPlayerExact(args[2]);
+            String chestOwner = location + ".owner";
 
             // Checks if the chest is protected and the sender owns the chest
-            if(plugin.getConfig().contains(location) && plugin.getConfig().get(location).equals(p.getUniqueId().toString()))
+            if(plugin.getConfig().contains(location) && plugin.getConfig().get(chestOwner).equals(p.getUniqueId().toString()))
             {
                 changeChestOwner(p, target, location);
             }
         }
     } // End chestSetOwner
 
-    private void chestRemoveOwner(Player p, String[] args)
+    private void chestSetPublic(Player p, String[] args)
     {
-
         String location = getTargetChest(p);
 
-        if (p.isOp())
+        if(!(boolean) plugin.getConfig().get(location + ".isPublic"))
         {
-            if (plugin.getConfig().contains(location))
+            if(p.isOp())
             {
-                plugin.getConfig().set(location, null);
-                p.sendMessage(ChatColor.BLUE + "You have removed protection from this chest");
-                plugin.saveConfig();
+                plugin.getConfig().set(location + ".isPublic", true);
+                p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
+                        + "'s " + ChatColor.BLUE +"to " + ChatColor.RED + "PUBLIC");
+            }
+            else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
+            {
+                plugin.getConfig().set(location + ".isPublic", true);
+                p.sendMessage(ChatColor.BLUE + "You set your chest to " + ChatColor.RED + "PUBLIC");
             }
             else
             {
-                p.sendMessage(ChatColor.RED + "That chest is already unprotected!");
+                p.sendMessage(ChatColor.RED + "That is not your chest");
             }
         }
-        else
+    }
+
+    private void chestSetPrivate(Player p, String[] args)
+    {
+        String location = getTargetChest(p);
+
+        if((boolean) plugin.getConfig().get(location + ".isPublic"))
         {
-            if (plugin.getConfig().contains(location))
+            if(p.isOp())
             {
-                plugin.getConfig().set(location, null);
-                p.sendMessage(ChatColor.BLUE + "You have removed protection from this chest");
-                plugin.saveConfig();
+                plugin.getConfig().set(location + ".isPublic", false);
+                p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
+                        + "'s " + ChatColor.BLUE +"to " + ChatColor.RED + "PRIVATE");
+            }
+            else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
+            {
+                plugin.getConfig().set(location + ".isPublic", false);
+                p.sendMessage(ChatColor.BLUE + "You set your chest to " + ChatColor.RED + "PRIVATE");
             }
             else
             {
-                p.sendMessage(ChatColor.RED + "That chest is already unprotected!");
+                p.sendMessage(ChatColor.RED + "That is not your chest");
             }
         }
-    } // End chestRemoveOwner
+    }
 
     private void chestGetOwner(Player p, String[] args)
     {
@@ -145,20 +161,11 @@ public class ErisChest implements CommandExecutor {
 
         if(plugin.getConfig().contains(location))
         {
-            String owner = plugin.getConfig().get(location).toString();
+            String ownerName = plugin.getConfig().get(location + ".ownerName").toString();
 
-            UUID uuid = UUID.fromString(owner);
 
-            Player pOwner = Bukkit.getPlayer(uuid);
+            p.sendMessage(ChatColor.BLUE + "That chest belongs to " + ChatColor.GOLD + ownerName);
 
-            if(pOwner != null)
-            {
-                p.sendMessage(ChatColor.BLUE + "That chest belongs to " + pOwner.getDisplayName());
-            }
-            else
-            {
-                p.sendMessage(ChatColor.BLUE + "The owner of that chest is not online at the moment!");
-            }
         }
     }
 
@@ -175,12 +182,15 @@ public class ErisChest implements CommandExecutor {
         location += Integer.toString(y);
         location += Integer.toString(z);
 
+        location = "chest." + location;
+
         return location;
     }
 
     private void changeChestOwner (Player p, Player target, String location)
     {
-        plugin.getConfig().set(location, target.getUniqueId().toString());
+        plugin.getConfig().set(location + ".owner", target.getUniqueId().toString());
+        plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(target.getDisplayName()));
         p.sendMessage(ChatColor.BLUE + "You changed the chest owner to " + ChatColor.GOLD + target.getDisplayName());
         target.sendMessage(ChatColor.GOLD + p.getDisplayName() + ChatColor.BLUE + " made you the chest owner");
         plugin.saveConfig();

@@ -1,10 +1,10 @@
-D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\ChestInteractListener.java
-D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\ChestListener.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestInteractListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\AFK\Afk.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\EnderChest\EnderChestCommand.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMoveAFK.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestBreakListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ErisEssentials.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\FurnaceLocker\FurnaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.java
@@ -12,8 +12,8 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\M
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Broadcast\Broadcast.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerInventory.java
-D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\ChestBreakListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\HopperLocker\HopperListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Fly\Fly.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Invisible\Invisibility.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Commands\ErisChest.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestListener.java

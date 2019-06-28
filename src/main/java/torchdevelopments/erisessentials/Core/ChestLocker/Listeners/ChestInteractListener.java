@@ -1,4 +1,4 @@
-package torchdevelopments.erisessentials.Core.ChestLocker;
+package torchdevelopments.erisessentials.Core.ChestLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -25,36 +25,37 @@ public class ChestInteractListener implements Listener {
             if(e.getClickedBlock().getType().equals(Material.CHEST))
             {
                 Player p = e.getPlayer();
-                String code = p.getUniqueId().toString();
+                String playerUUID = p.getUniqueId().toString();
+
                 Location loc = e.getClickedBlock().getLocation();
                 int x = loc.getBlockX();
                 int y = loc.getBlockY();
                 int z = loc.getBlockZ();
+
                 String location = Integer.toString(x);
                 location += Integer.toString(y);
                 location += Integer.toString(z);
+                location = "chest." + location;
 
                 if (plugin.getConfig().contains(location))
                 {
                     String lockedChest;
-                    lockedChest = (String) plugin.getConfig().get(location);
+                    lockedChest = (String) plugin.getConfig().get(location + ".owner");
 
-                    if(p.isOp() && !code.contentEquals(lockedChest))
+                    if(p.isOp() && !playerUUID.contentEquals(lockedChest))
                     {
-                        UUID uuid = UUID.fromString(lockedChest);
-                        Player target = Bukkit.getServer().getPlayer(uuid);
-                        if(target != null)
-                        {
-                            String name = target.getDisplayName();
-                            p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + name +  "'s " + ChatColor.BLUE + "chest");
-                        }
-                        else
-                        {
-                            p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + "Someone's " + ChatColor.BLUE + "chest");
-                        }
+                        String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
+
+                        p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "chest");
 
                     }
-                    else if(!code.contentEquals(lockedChest))
+                    else if(!playerUUID.contentEquals(lockedChest) && (Boolean) plugin.getConfig().get(location + ".isPublic"))
+                    {
+                        String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
+
+                        p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public chest");
+                    }
+                    else if(!playerUUID.contentEquals(lockedChest) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {
                         e.setCancelled(true);
                         p.sendMessage(ChatColor.RED + "This is not your chest!");

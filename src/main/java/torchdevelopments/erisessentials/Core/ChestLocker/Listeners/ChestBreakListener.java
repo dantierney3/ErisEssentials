@@ -1,4 +1,4 @@
-package torchdevelopments.erisessentials.Core.ChestLocker;
+package torchdevelopments.erisessentials.Core.ChestLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -22,7 +22,7 @@ public class ChestBreakListener implements Listener {
         if(e.getBlock().getType().equals(Material.CHEST))
         {
             Player p = e.getPlayer();
-            String code = p.getUniqueId().toString();
+            String playerUUID = p.getUniqueId().toString();
             Location loc = e.getBlock().getLocation();
 
             int x = loc.getBlockX();
@@ -32,40 +32,32 @@ public class ChestBreakListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
+            location = "chest." + location;
+            String lockedChest = (String) plugin.getConfig().get(location + ".owner");
 
             if(plugin.getConfig().contains(location))
             {
-                String lockedChest = (String) plugin.getConfig().get(location);
-                if(p.isOp() && !code.contentEquals(lockedChest))
-                {
-                    UUID uuid = UUID.fromString(lockedChest);
-                    Player target = Bukkit.getServer().getPlayer(uuid);
-                    if(target != null)
-                    {
-                        String name = target.getDisplayName();
-                        p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + name +  "'s " + ChatColor.RED + "chest");
-                    }
-                    else
-                    {
-                        p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + "Someone" +  "'s " + ChatColor.RED + "chest");
-                    }
 
+                if(p.isOp() && !playerUUID.equals(lockedChest)) {
+                    String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
+                    p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + ownerName + "'s " + ChatColor.RED + "chest");
                     plugin.getConfig().set(location, null);
                     plugin.saveConfig();
-
                 }
-                else if (code.contentEquals(lockedChest))
+                else if (playerUUID.contentEquals(lockedChest))
                 {
                     plugin.getConfig().set(location, null);
                     plugin.saveConfig();
                 }
-                else if(!code.contentEquals(lockedChest))
+                else if(!playerUUID.contentEquals(lockedChest))
                 {
                     e.setCancelled(true);
                     p.sendMessage(ChatColor.RED + "This is not your chest!");
                 }
+
             }
 
         }
+
     }
 }

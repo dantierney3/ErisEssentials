@@ -6,10 +6,8 @@ torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerIn
 torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
 torchdevelopments\erisessentials\Core\Util\Commands\AFK\Afk.class
 torchdevelopments\erisessentials\Core\FurnaceLocker\FurnaceListener.class
-torchdevelopments\erisessentials\Core\ChestLocker\ChestListener.class
+torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestInteractListener.class
 torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.class
-torchdevelopments\erisessentials\Core\ChestLocker\ChestBreakListener.class
-torchdevelopments\erisessentials\Core\ChestLocker\ChestInteractListener.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep$1.class
 torchdevelopments\erisessentials\Core\Util\Commands\Broadcast\Broadcast.class
 torchdevelopments\erisessentials\Core\Util\Commands\EnderChest\EnderChestCommand.class
@@ -18,5 +16,7 @@ torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask$1.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.class
 torchdevelopments\erisessentials\Core\ErisEssentials.class
 torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMoveAFK.class
+torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestListener.class
+torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestBreakListener.class
 torchdevelopments\erisessentials\Core\HopperLocker\HopperListener.class
 torchdevelopments\erisessentials\Core\Util\Commands\Fly\Fly.class

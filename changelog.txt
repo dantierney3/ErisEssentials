@@ -17,16 +17,22 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 ### [Added] 
 - Players can now remove protection from their own chests
 - players can now change the owner of their own chests
+- Players can now set their own chests to public
+- Players can now set their own chests to private
+- Players can see the owner of a chest
 
 ### [Changed]
 - Changed the command structure for chest protection
 - Command feedback color for some commands set to blue rather than red
+- Chest protection data now allows for a public property
+- chest protection data now stores the chest owner name, so it is accessible when the owner is offline
 
 ### [Removed]
 - Old chest protection command classes
 
 ### [Fixed]
 - The game day is no longer being kept at 0 due to multiplayer sleep
+- Chests cannot be broken by players who dont own the chest
 
 
 ## 0.11.0 = 2019-06-26
