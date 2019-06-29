@@ -1,3 +1,31 @@
+/*
+ * Copyright © Daniel Tierney, 2019. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are
+ * permitted provided that the following conditions are met:
+ *
+ *    1. Redistributions of source code must retain the above copyright notice, this list of
+ *       conditions and the following disclaimer.
+ *
+ *    2. Redistributions in binary form must reproduce the above copyright notice, this list
+ *       of conditions and the following disclaimer in the documentation and/or other materials
+ *       provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ''AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * The views and conclusions contained in the software and documentation are those of the
+ * authors and contributors and should not be interpreted as representing official policies,
+ * either expressed or implied, of anybody else.
+ */
+
 package torchdevelopments.erisessentials.Core.BarrelLocker.Commands;
 
 import org.bukkit.Bukkit;
@@ -87,11 +115,11 @@ public class ErisBarrel implements CommandExecutor {
 
             if(plugin.getConfig().contains(location)) // Changes the owner if the barrel is protected
             {
-                changebarrelOwner(p, target, location);
+                changeBarrelOwner(p, target, location);
             }
             else // Creates a protected barrel if the block is unprotected
             {
-                changebarrelOwner(p, target, location);
+                changeBarrelOwner(p, target, location);
             }
         }
         else
@@ -102,7 +130,7 @@ public class ErisBarrel implements CommandExecutor {
             // Checks if the barrel is protected and the sender owns the barrel
             if(plugin.getConfig().contains(location) && plugin.getConfig().get(barrelOwner).equals(p.getUniqueId().toString()))
             {
-                changebarrelOwner(p, target, location);
+                changeBarrelOwner(p, target, location);
             }
         }
     } // End barrelSetOwner
@@ -195,12 +223,12 @@ public class ErisBarrel implements CommandExecutor {
 
     private String getTargetbarrel(Player p)
     {
-        Block targetbarrel = p.getTargetBlockExact(5);
-        Location targetbarrelLoc = targetbarrel.getLocation();
+        Block targetBarrel = p.getTargetBlockExact(5);
+        Location targetBarrelLoc = targetBarrel.getLocation();
 
-        int x = targetbarrelLoc.getBlockX();
-        int y = targetbarrelLoc.getBlockY();
-        int z = targetbarrelLoc.getBlockZ();
+        int x = targetBarrelLoc.getBlockX();
+        int y = targetBarrelLoc.getBlockY();
+        int z = targetBarrelLoc.getBlockZ();
 
         String location = Integer.toString(x);
         location += Integer.toString(y);
@@ -211,7 +239,7 @@ public class ErisBarrel implements CommandExecutor {
         return location;
     }
 
-    private void changebarrelOwner (Player p, Player target, String location)
+    private void changeBarrelOwner (Player p, Player target, String location)
     {
         plugin.getConfig().set(location + ".owner", target.getUniqueId().toString());
         plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(target.getDisplayName()));

@@ -25,28 +25,3 @@
  * authors and contributors and should not be interpreted as representing official policies,
  * either expressed or implied, of anybody else.
  */
-
-package torchdevelopments.erisessentials.Core.Util.MultiPlayerSleep;
-
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.scheduler.BukkitRunnable;
-
-public class ClearTask {
-
-    public static void weatherToClear()
-    {
-
-        Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("ErisEssentials");
-
-        new BukkitRunnable()
-    {
-        @Override
-        public void run()
-        {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "weather clear 12000");
-
-        }
-    }.runTaskLater(plugin, 100);
-    }
-}
