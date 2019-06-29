@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a72db8f-f776-4bf2-96af-582c934c3004" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelBreakListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelBreakListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelInteractListener.java" afterDir="false" />
@@ -16,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceBreakListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceBreakListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceInteractListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnacePlaceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnacePlaceListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/HopperLocker/HopperListener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java" afterDir="false" />
@@ -29,6 +27,42 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/copyright" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/copyright.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ErisEssentials-0.2.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ErisEssentials-0.2.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelBreakListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelBreakListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelInteractListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelInteractListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelPlaceListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelPlaceListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Commands/ErisChest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Commands/ErisChest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestBreakListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestBreakListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestInteractListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestInteractListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ErisEssentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/ErisEssentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Commands/ErisFurnace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Commands/ErisFurnace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceBreakListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceBreakListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceInteractListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceInteractListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnacePlaceListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnacePlaceListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/HopperLocker/HopperListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/Fly/Fly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/Fly/Fly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/Invisible/Invisibility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/Invisible/Invisibility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/PlayerInventory/ViewPlayerInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/Commands/PlayerInventory/ViewPlayerInventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomFarewell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomFarewell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-ErisEssentials-0.2.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-ErisEssentials-0.2.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,19 +77,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceBreakListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#0#3630#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Commands/ErisFurnace.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,15 +181,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="476">
+              <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
               <folding>
                 <element signature="e#0#9415#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -227,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Protection/ChestCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Protection/ChestChecker.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/BarrelPlaceListener.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/copyright" />
@@ -256,6 +285,7 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelInteractListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelBreakListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
       </list>
     </option>
   </component>
@@ -436,9 +466,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.20202559" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.20202559" />
       <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" weight="0.1913646" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -448,7 +477,7 @@
       <window_info anchor="bottom" id="Inspection Results" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20043337" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20043337" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -658,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -686,7 +708,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/copyright">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/copyright.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="26" selection-end-column="3" />
@@ -950,12 +972,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="476">
+          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
           <folding>
             <element signature="e#0#9415#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>

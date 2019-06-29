@@ -15,7 +15,6 @@ torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.class
 torchdevelopments\erisessentials\Core\ErisEssentials.class
 torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMoveAFK.class
 torchdevelopments\erisessentials\Core\ChestLocker\Listeners\ChestListener.class
-torchdevelopments\erisessentials\Core\HopperLocker\HopperListener.class
 torchdevelopments\erisessentials\Core\Util\Commands\Fly\Fly.class
 torchdevelopments\erisessentials\Core\BarrelLocker\Listener\BarrelInteractListener.class
 torchdevelopments\erisessentials\Core\FurnaceLocker\Listeners\FurnaceBreakListener.class
