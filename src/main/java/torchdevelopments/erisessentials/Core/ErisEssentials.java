@@ -11,6 +11,10 @@ import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestBreakLis
 import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestInteractListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.Commands.*;
+import torchdevelopments.erisessentials.Core.FurnaceLocker.Commands.ErisFurnace;
+import torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners.FurnaceBreakListener;
+import torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners.FurnaceInteractListener;
+import torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners.FurnacePlaceListener;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
 import torchdevelopments.erisessentials.Core.Util.Commands.Broadcast.Broadcast;
 import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
@@ -47,7 +51,7 @@ public final class ErisEssentials extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new CustomFarewell(), this);
 
         // Register ChestLocker
-        System.out.println("[ErisEssentials] Registering ChestProtect");
+        System.out.println("[ErisEssentials] Registering ChestLocker");
         getServer().getPluginManager().registerEvents(new ChestListener(), this);
         getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
         getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
@@ -61,6 +65,13 @@ public final class ErisEssentials extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new BarrelInteractListener(), this);
         getServer().getPluginManager().registerEvents(new BarrelBreakListener(), this);
         getCommand("barrel").setExecutor(new ErisBarrel());
+
+        // Register FurnaceLocker
+        System.out.println("[ErisEssentials] Registering FurnaceLocker");
+        getServer().getPluginManager().registerEvents(new FurnacePlaceListener(), this);
+        getServer().getPluginManager().registerEvents(new FurnaceInteractListener(), this);
+        getServer().getPluginManager().registerEvents(new FurnaceBreakListener(), this);
+        getCommand("furnace").setExecutor(new ErisFurnace());
 
         // Register Custom Commands
         System.out.println("[ErisEssentials] Registering Custom Commands");

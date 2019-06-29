@@ -24,6 +24,11 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - Players can now set their own barrels to public
 - Players can now set their own barrels to private
 - Players can see the owner of a barrel
+- Furnaces are protected
+- Players can now change the owner of their own furnaces
+- Players can now change their own furnaces to public
+- Players can now change their own furnaces to private
+- Players can see the owner of a furnace
 
 ### [Changed]
 - Changed the command structure for chest protection
@@ -37,6 +42,7 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 ### [Fixed]
 - The game day is no longer being kept at 0 due to multiplayer sleep
 - Chests cannot be broken by players who dont own the chest
+- Inventory blocks placed before plugin installation dont have a isPublic flag when the owner is set to a player
 
 
 ## 0.11.0 = 2019-06-26

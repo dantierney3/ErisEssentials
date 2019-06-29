@@ -215,6 +215,7 @@ public class ErisChest implements CommandExecutor {
     {
         plugin.getConfig().set(location + ".owner", target.getUniqueId().toString());
         plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(target.getDisplayName()));
+        plugin.getConfig().set(location + ".isPublic", false);
         p.sendMessage(ChatColor.BLUE + "You changed the chest owner to " + ChatColor.GOLD + target.getDisplayName());
         target.sendMessage(ChatColor.GOLD + p.getDisplayName() + ChatColor.BLUE + " made you the chest owner");
         plugin.saveConfig();

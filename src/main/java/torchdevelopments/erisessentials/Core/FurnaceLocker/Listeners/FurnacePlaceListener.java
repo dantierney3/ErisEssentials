@@ -1,4 +1,4 @@
-package torchdevelopments.erisessentials.Core.BarrelLocker.Listener;
+package torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -10,14 +10,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.Plugin;
 
-public class BarrelPlaceListener implements Listener {
+public class FurnacePlaceListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
 
     @EventHandler
-    public void onPlayerPlaceBarrel(BlockPlaceEvent e)
+    public void onPlayerPlaceFurnace(BlockPlaceEvent e)
     {
-        if (e.getBlockPlaced().getType().equals(Material.BARREL))
+        if (e.getBlockPlaced().getType().equals(Material.FURNACE))
         {
 
             Player p = e.getPlayer();
@@ -32,7 +32,7 @@ public class BarrelPlaceListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
-            location = "barrel." + location;
+            location = "furnace." + location;
 
             if(plugin.getConfig().contains(location))
             {
@@ -59,5 +59,4 @@ public class BarrelPlaceListener implements Listener {
         }
 
     }
-
 }
