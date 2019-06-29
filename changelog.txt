@@ -12,14 +12,18 @@ The versions will run in the following format:
 When referring to ticks, it means game ticks (20 ticks per second), not redstone ticks (10 ticks per second).
 
 ----------------------------
-## 0.2.0 - 2019-06-28
+## 0.2.0 - 2019-06-29
 
 ### [Added] 
-- Players can now remove protection from their own chests
 - players can now change the owner of their own chests
 - Players can now set their own chests to public
 - Players can now set their own chests to private
 - Players can see the owner of a chest
+- Barrels are protected
+- Players can now change the owner of their own barrels
+- Players can now set their own barrels to public
+- Players can now set their own barrels to private
+- Players can see the owner of a barrel
 
 ### [Changed]
 - Changed the command structure for chest protection

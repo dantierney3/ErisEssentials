@@ -17,6 +17,8 @@ commands:
   broadcast:
     description: Broadcast a message to the server
   chest:
-    description: New command to handle chest protection
+    description: Commands to alter chest protection
+  barrel:
+    description: Commands to alter barrel protection
   invisible:
       description: Make yourself invisible

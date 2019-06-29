@@ -3,6 +3,10 @@ package torchdevelopments.erisessentials.Core;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import torchdevelopments.erisessentials.Core.BarrelLocker.Commands.ErisBarrel;
+import torchdevelopments.erisessentials.Core.BarrelLocker.Listener.BarrelBreakListener;
+import torchdevelopments.erisessentials.Core.BarrelLocker.Listener.BarrelInteractListener;
+import torchdevelopments.erisessentials.Core.BarrelLocker.Listener.BarrelPlaceListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestBreakListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestInteractListener;
 import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestListener;
@@ -49,6 +53,14 @@ public final class ErisEssentials extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
 
         getCommand("chest").setExecutor(new ErisChest());
+
+        // Register BarrelLocker
+        System.out.println("[ErisEssentials] Registering BarrelLocker");
+
+        getServer().getPluginManager().registerEvents(new BarrelPlaceListener(), this);
+        getServer().getPluginManager().registerEvents(new BarrelInteractListener(), this);
+        getServer().getPluginManager().registerEvents(new BarrelBreakListener(), this);
+        getCommand("barrel").setExecutor(new ErisBarrel());
 
         // Register Custom Commands
         System.out.println("[ErisEssentials] Registering Custom Commands");
