@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.FurnaceLocker.Commands;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Commands;
 
 
 import org.bukkit.Bukkit;

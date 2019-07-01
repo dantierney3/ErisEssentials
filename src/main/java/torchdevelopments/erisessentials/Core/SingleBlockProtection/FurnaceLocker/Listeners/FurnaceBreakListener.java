@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.ChestLocker.Listeners;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -38,17 +38,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.plugin.Plugin;
 
-import java.util.UUID;
-
-public class ChestBreakListener implements Listener {
+public class FurnaceBreakListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
 
     @EventHandler
-    public void onChestBreak (BlockBreakEvent e)
-    {
-        if(e.getBlock().getType().equals(Material.CHEST))
-        {
+    public void onFurnaceBreak(BlockBreakEvent e) {
+        if (e.getBlock().getType().equals(Material.FURNACE)) {
             Player p = e.getPlayer();
             String playerUUID = p.getUniqueId().toString();
             Location loc = e.getBlock().getLocation();
@@ -60,32 +56,26 @@ public class ChestBreakListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
-            location = "chest." + location;
-            String lockedChest = (String) plugin.getConfig().get(location + ".owner");
+            location = "furnace." + location;
+            String lockedFurnace = (String) plugin.getConfig().get(location + ".owner");
 
-            if(plugin.getConfig().contains(location))
-            {
+            if (plugin.getConfig().contains(location)) {
 
-                if(p.isOp() && !playerUUID.equals(lockedChest)) {
+                if (p.isOp() && !playerUUID.equals(lockedFurnace)) {
                     String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
-                    p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + ownerName + "'s " + ChatColor.RED + "chest");
+                    p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + ownerName + "'s " + ChatColor.RED + "furnace");
                     plugin.getConfig().set(location, null);
                     plugin.saveConfig();
-                }
-                else if (playerUUID.contentEquals(lockedChest))
-                {
+                } else if (playerUUID.contentEquals(lockedFurnace)) {
                     plugin.getConfig().set(location, null);
                     plugin.saveConfig();
-                }
-                else if(!playerUUID.contentEquals(lockedChest))
-                {
+                } else if (!playerUUID.contentEquals(lockedFurnace)) {
                     e.setCancelled(true);
-                    p.sendMessage(ChatColor.RED + "This is not your chest!");
+                    p.sendMessage(ChatColor.RED + "This is not your furnace!");
                 }
 
             }
 
         }
-
     }
 }

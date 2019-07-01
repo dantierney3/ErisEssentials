@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -35,19 +35,23 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.Plugin;
 
-public class FurnaceBreakListener implements Listener {
+public class BarrelPlaceListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
 
     @EventHandler
-    public void onFurnaceBreak(BlockBreakEvent e) {
-        if (e.getBlock().getType().equals(Material.FURNACE)) {
+    public void onPlayerPlaceBarrel(BlockPlaceEvent e)
+    {
+        if (e.getBlockPlaced().getType().equals(Material.BARREL))
+        {
+
             Player p = e.getPlayer();
-            String playerUUID = p.getUniqueId().toString();
-            Location loc = e.getBlock().getLocation();
+            Location loc = e.getBlockPlaced().getLocation();
+
+            String uuid = p.getUniqueId().toString();
 
             int x = loc.getBlockX();
             int y = loc.getBlockY();
@@ -56,26 +60,32 @@ public class FurnaceBreakListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
-            location = "furnace." + location;
-            String lockedFurnace = (String) plugin.getConfig().get(location + ".owner");
+            location = "barrel." + location;
 
-            if (plugin.getConfig().contains(location)) {
-
-                if (p.isOp() && !playerUUID.equals(lockedFurnace)) {
-                    String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
-                    p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + ownerName + "'s " + ChatColor.RED + "furnace");
-                    plugin.getConfig().set(location, null);
+            if(plugin.getConfig().contains(location))
+            {
+                if(plugin.getConfig().get(location) == null)
+                {
+                    plugin.getConfig().set(location + ".owner",uuid);
+                    plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
+                    plugin.getConfig().set(location + ".isPublic", false);
                     plugin.saveConfig();
-                } else if (playerUUID.contentEquals(lockedFurnace)) {
-                    plugin.getConfig().set(location, null);
-                    plugin.saveConfig();
-                } else if (!playerUUID.contentEquals(lockedFurnace)) {
-                    e.setCancelled(true);
-                    p.sendMessage(ChatColor.RED + "This is not your furnace!");
                 }
-
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                plugin.getConfig().set(location + ".owner",uuid);
+                plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
+                plugin.getConfig().set(location + ".isPublic", false);
+                plugin.saveConfig();
             }
 
         }
+
     }
+
 }

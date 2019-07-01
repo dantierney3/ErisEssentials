@@ -19,22 +19,31 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - Players can now set their own chests to public
 - Players can now set their own chests to private
 - Players can see the owner of a chest
+- Players can now give friends access to their chests
 - Barrels are protected
 - Players can now change the owner of their own barrels
 - Players can now set their own barrels to public
 - Players can now set their own barrels to private
 - Players can see the owner of a barrel
+- Players can now give friends access to their barrels
 - Furnaces are protected
 - Players can now change the owner of their own furnaces
 - Players can now change their own furnaces to public
 - Players can now change their own furnaces to private
 - Players can see the owner of a furnace
+- Players can now give friends access to their furnaces
+- Players can now change the owner of their own hoppers
+- Players can now change their own hoppers to public
+- Players can now change their own hoppers to private
+- Players can now see the owner of a hopper
+- Players can now give friends access to their hoppers
 
 ### [Changed]
 - Changed the command structure for chest protection
 - Command feedback color for some commands set to blue rather than red
 - Chest protection data now allows for a public property
-- chest protection data now stores the chest owner name, so it is accessible when the owner is offline
+- Chest protection data now stores the chest owner name, so it is accessible when the owner is offline
+- Try-Catch blocks will now print a stack trace for easy issue reporting and fixing
 
 ### [Removed]
 - Old chest protection command classes

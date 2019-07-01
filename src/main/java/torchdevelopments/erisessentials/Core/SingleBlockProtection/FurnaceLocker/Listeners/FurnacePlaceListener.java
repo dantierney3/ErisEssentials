@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.ChestLocker.Listeners;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -38,14 +38,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.Plugin;
 
-public class ChestListener implements Listener {
+public class FurnacePlaceListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
 
     @EventHandler
-    public void onPlayerPlaceChest(BlockPlaceEvent e)
+    public void onPlayerPlaceFurnace(BlockPlaceEvent e)
     {
-        if (e.getBlockPlaced().getType().equals(Material.CHEST))
+        if (e.getBlockPlaced().getType().equals(Material.FURNACE))
         {
 
             Player p = e.getPlayer();
@@ -60,7 +60,7 @@ public class ChestListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
-            location = "chest." + location;
+            location = "furnace." + location;
 
             if(plugin.getConfig().contains(location))
             {
@@ -87,7 +87,4 @@ public class ChestListener implements Listener {
         }
 
     }
-
 }
-
-

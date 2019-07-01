@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.BarrelLocker.Commands;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

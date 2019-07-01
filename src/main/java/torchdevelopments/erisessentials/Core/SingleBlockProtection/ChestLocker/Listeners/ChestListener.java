@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.BarrelLocker.Listener;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.ChestLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -35,21 +35,23 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.Plugin;
 
-public class BarrelBreakListener implements Listener {
+public class ChestListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
 
     @EventHandler
-    public void onBarrelBreak (BlockBreakEvent e)
+    public void onPlayerPlaceChest(BlockPlaceEvent e)
     {
-        if(e.getBlock().getType().equals(Material.BARREL))
+        if (e.getBlockPlaced().getType().equals(Material.CHEST))
         {
+
             Player p = e.getPlayer();
-            String playerUUID = p.getUniqueId().toString();
-            Location loc = e.getBlock().getLocation();
+            Location loc = e.getBlockPlaced().getLocation();
+
+            String uuid = p.getUniqueId().toString();
 
             int x = loc.getBlockX();
             int y = loc.getBlockY();
@@ -58,32 +60,34 @@ public class BarrelBreakListener implements Listener {
             String location = Integer.toString(x);
             location += Integer.toString(y);
             location += Integer.toString(z);
-            location = "barrel." + location;
-            String lockedBarrel = (String) plugin.getConfig().get(location + ".owner");
+            location = "chest." + location;
 
             if(plugin.getConfig().contains(location))
             {
-
-                if(p.isOp() && !playerUUID.equals(lockedBarrel)) {
-                    String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
-                    p.sendMessage(ChatColor.RED + "You broke " + ChatColor.GOLD + ownerName + "'s " + ChatColor.RED + "barrel");
-                    plugin.getConfig().set(location, null);
+                if(plugin.getConfig().get(location) == null)
+                {
+                    plugin.getConfig().set(location + ".owner",uuid);
+                    plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
+                    plugin.getConfig().set(location + ".isPublic", false);
                     plugin.saveConfig();
                 }
-                else if (playerUUID.contentEquals(lockedBarrel))
+                else
                 {
-                    plugin.getConfig().set(location, null);
-                    plugin.saveConfig();
+                    return;
                 }
-                else if(!playerUUID.contentEquals(lockedBarrel))
-                {
-                    e.setCancelled(true);
-                    p.sendMessage(ChatColor.RED + "This is not your barrel!");
-                }
-
+            }
+            else
+            {
+                plugin.getConfig().set(location + ".owner",uuid);
+                plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
+                plugin.getConfig().set(location + ".isPublic", false);
+                plugin.saveConfig();
             }
 
         }
 
     }
+
 }
+
+

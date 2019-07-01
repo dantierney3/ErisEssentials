@@ -29,20 +29,25 @@
 package torchdevelopments.erisessentials.Core;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import torchdevelopments.erisessentials.Core.BarrelLocker.Commands.ErisBarrel;
-import torchdevelopments.erisessentials.Core.BarrelLocker.Listener.BarrelBreakListener;
-import torchdevelopments.erisessentials.Core.BarrelLocker.Listener.BarrelInteractListener;
-import torchdevelopments.erisessentials.Core.BarrelLocker.Listener.BarrelPlaceListener;
-import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestBreakListener;
-import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestInteractListener;
-import torchdevelopments.erisessentials.Core.ChestLocker.Listeners.ChestListener;
-import torchdevelopments.erisessentials.Core.ChestLocker.Commands.*;
-import torchdevelopments.erisessentials.Core.FurnaceLocker.Commands.ErisFurnace;
-import torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners.FurnaceBreakListener;
-import torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners.FurnaceInteractListener;
-import torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners.FurnacePlaceListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Commands.ErisBarrel;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener.BarrelBreakListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener.BarrelInteractListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener.BarrelPlaceListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.ChestLocker.Listeners.ChestBreakListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.ChestLocker.Listeners.ChestInteractListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.ChestLocker.Listeners.ChestListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.ChestLocker.Commands.*;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Commands.ErisFurnace;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Listeners.FurnaceBreakListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Listeners.FurnaceInteractListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.FurnaceLocker.Listeners.FurnacePlaceListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.HopperLocker.Commands.ErisHopper;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.HopperLocker.Listeners.HopperBreakListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.HopperLocker.Listeners.HopperInteractListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.HopperLocker.Listeners.HopperPlaceListener;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
 import torchdevelopments.erisessentials.Core.Util.Commands.Broadcast.Broadcast;
 import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
@@ -59,59 +64,79 @@ public final class ErisEssentials extends JavaPlugin{
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
 
-        // System message at start of startup process
-        System.out.println("[ErisEssentials] ErisEssentials is starting up!");
+        try
+        {
+            // Plugin startup logic
 
-        // Startup process and console outputs to be entered here
+            // System message at start of startup process
+            System.out.println("[ErisEssentials] ErisEssentials is starting up!");
 
-        // Load Config
-        Bukkit.getServer().getPluginManager().getPlugin("ErisEssentials").saveDefaultConfig();
+            // Startup process and console outputs to be entered here
 
-        // Register Multiplayer Sleep events
-        System.out.println("[ErisEssentials] Registering Multiplayer Sleep Events");
-        getServer().getPluginManager().registerEvents(new MultiPlayerSleep(), this);
+            // Load Config
+            Bukkit.getServer().getPluginManager().getPlugin("ErisEssentials").saveDefaultConfig();
 
-        // Register Custom Greeting events
-        System.out.println("[ErisEssentials] Registering Custom Greeting Events");
-        getServer().getPluginManager().registerEvents(new CustomGreeting(), this);
-        getServer().getPluginManager().registerEvents(new CustomFarewell(), this);
+            // Register Multiplayer Sleep events
+            System.out.println("[ErisEssentials] Registering Multiplayer Sleep Events");
+            getServer().getPluginManager().registerEvents(new MultiPlayerSleep(), this);
 
-        // Register ChestLocker
-        System.out.println("[ErisEssentials] Registering ChestLocker");
-        getServer().getPluginManager().registerEvents(new ChestListener(), this);
-        getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
-        getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
+            // Register Custom Greeting events
+            System.out.println("[ErisEssentials] Registering Custom Greeting Events");
+            getServer().getPluginManager().registerEvents(new CustomGreeting(), this);
+            getServer().getPluginManager().registerEvents(new CustomFarewell(), this);
 
-        getCommand("chest").setExecutor(new ErisChest());
+            // Register ChestLocker
+            System.out.println("[ErisEssentials] Registering ChestLocker");
+            getServer().getPluginManager().registerEvents(new ChestListener(), this);
+            getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
+            getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
 
-        // Register BarrelLocker
-        System.out.println("[ErisEssentials] Registering BarrelLocker");
+            getCommand("chest").setExecutor(new ErisChest());
 
-        getServer().getPluginManager().registerEvents(new BarrelPlaceListener(), this);
-        getServer().getPluginManager().registerEvents(new BarrelInteractListener(), this);
-        getServer().getPluginManager().registerEvents(new BarrelBreakListener(), this);
-        getCommand("barrel").setExecutor(new ErisBarrel());
+            // Register BarrelLocker
+            System.out.println("[ErisEssentials] Registering BarrelLocker");
 
-        // Register FurnaceLocker
-        System.out.println("[ErisEssentials] Registering FurnaceLocker");
-        getServer().getPluginManager().registerEvents(new FurnacePlaceListener(), this);
-        getServer().getPluginManager().registerEvents(new FurnaceInteractListener(), this);
-        getServer().getPluginManager().registerEvents(new FurnaceBreakListener(), this);
-        getCommand("furnace").setExecutor(new ErisFurnace());
+            getServer().getPluginManager().registerEvents(new BarrelPlaceListener(), this);
+            getServer().getPluginManager().registerEvents(new BarrelInteractListener(), this);
+            getServer().getPluginManager().registerEvents(new BarrelBreakListener(), this);
+            getCommand("barrel").setExecutor(new ErisBarrel());
 
-        // Register Custom Commands
-        System.out.println("[ErisEssentials] Registering Custom Commands");
-        getCommand("fly").setExecutor(new Fly());
-        getCommand("afk").setExecutor(new Afk());
-        getCommand("ec").setExecutor(new EnderChestCommand());
-        getCommand("inv").setExecutor(new ViewPlayerInventory());
-        getCommand("broadcast").setExecutor(new Broadcast());
-        getCommand("invisible").setExecutor(new Invisibility());
+            // Register FurnaceLocker
+            System.out.println("[ErisEssentials] Registering FurnaceLocker");
+            getServer().getPluginManager().registerEvents(new FurnacePlaceListener(), this);
+            getServer().getPluginManager().registerEvents(new FurnaceInteractListener(), this);
+            getServer().getPluginManager().registerEvents(new FurnaceBreakListener(), this);
+            getCommand("furnace").setExecutor(new ErisFurnace());
 
-        // System message at the end of the startup process
-        System.out.println("[ErisEssentials] ErisEssentials has finished loading!");
+            // Register FurnaceLocker
+            System.out.println("[ErisEssentials] Registering HopperLocker");
+            getServer().getPluginManager().registerEvents(new HopperPlaceListener(), this);
+            getServer().getPluginManager().registerEvents(new HopperInteractListener(), this);
+            getServer().getPluginManager().registerEvents(new HopperBreakListener(), this);
+            getCommand("hopper").setExecutor(new ErisHopper());
+
+            // Register Custom Commands
+            System.out.println("[ErisEssentials] Registering Custom Commands");
+            getCommand("fly").setExecutor(new Fly());
+            getCommand("afk").setExecutor(new Afk());
+            getCommand("ec").setExecutor(new EnderChestCommand());
+            getCommand("inventory").setExecutor(new ViewPlayerInventory());
+            getCommand("broadcast").setExecutor(new Broadcast());
+            getCommand("invisible").setExecutor(new Invisibility());
+
+            // System message at the end of the startup process
+            System.out.println("[ErisEssentials] ErisEssentials has finished loading!");
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println(ChatColor.RED + "[ErisEssentials] Critical Error, please send the developer the following:");
+            System.out.println(ChatColor.RED + "--------------------------------------");
+            System.out.println(ChatColor.RED + "[ErisEssentials] START OF STACK TRACE");
+            e.printStackTrace();
+            System.out.println(ChatColor.RED + "[ErisEssentials] END OF STACK TRACE");
+            System.out.println(ChatColor.RED + "--------------------------------------");
+        }
 
     }
 

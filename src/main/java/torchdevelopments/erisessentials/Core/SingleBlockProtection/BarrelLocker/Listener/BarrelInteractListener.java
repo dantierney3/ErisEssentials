@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.FurnaceLocker.Listeners;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -39,17 +39,17 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.Plugin;
 
-public class FurnaceInteractListener implements Listener {
+public class BarrelInteractListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
     final String DELIMITER = ",";
 
     @EventHandler
-    public void onPlayerFurnaceInteract(PlayerInteractEvent e)
+    public void onPlayerBarrelInteract(PlayerInteractEvent e)
     {
         if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK))
         {
-            if(e.getClickedBlock().getType().equals(Material.FURNACE))
+            if(e.getClickedBlock().getType().equals(Material.BARREL))
             {
                 Player p = e.getPlayer();
                 String playerUUID = p.getUniqueId().toString();
@@ -62,7 +62,7 @@ public class FurnaceInteractListener implements Listener {
                 String location = Integer.toString(x);
                 location += Integer.toString(y);
                 location += Integer.toString(z);
-                location = "furnace." + location;
+                location = "barrel." + location;
 
                 String friends = null;
                 String[] friendsArray = null;
@@ -74,26 +74,25 @@ public class FurnaceInteractListener implements Listener {
                     friendsArray = friends.split(DELIMITER);
                 }
 
-
                 if (plugin.getConfig().contains(location))
                 {
-                    String lockedFurnace;
-                    lockedFurnace = (String) plugin.getConfig().get(location + ".owner");
+                    String lockedBarrel;
+                    lockedBarrel = (String) plugin.getConfig().get(location + ".owner");
 
-                    if(p.isOp() && !playerUUID.contentEquals(lockedFurnace))
+                    if(p.isOp() && !playerUUID.contentEquals(lockedBarrel))
                     {
                         String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
-                        p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "furnace");
+                        p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "barrel");
 
                     }
-                    else if(!playerUUID.contentEquals(lockedFurnace) && (Boolean) plugin.getConfig().get(location + ".isPublic"))
+                    else if(!playerUUID.contentEquals(lockedBarrel) && (Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {
                         String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
-                        p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public furnace");
+                        p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public barrel");
                     }
-                    else if(!playerUUID.contentEquals(lockedFurnace) && friendsArray != null)
+                    else if(!playerUUID.contentEquals(lockedBarrel) && friendsArray != null)
                     {
                         for(String uuid : friendsArray)
                         {
@@ -101,7 +100,7 @@ public class FurnaceInteractListener implements Listener {
                             {
                                 String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
-                                p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "furnace");
+                                p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "barrel");
 
                                 break;
                             }
@@ -109,15 +108,15 @@ public class FurnaceInteractListener implements Listener {
                         // Break out of the if-else-if statements otherwise the last statement will also run true
                         return;
                     }
-                    else if(!playerUUID.contentEquals(lockedFurnace) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
+                    else if(!playerUUID.contentEquals(lockedBarrel) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {
                         e.setCancelled(true);
-                        p.sendMessage(ChatColor.RED + "This is not your furnace!");
+                        p.sendMessage(ChatColor.RED + "This is not your barrel!");
                     }
                 }
                 else
                 {
-                    p.sendMessage(ChatColor.RED + "This furnace is unprotected!");
+                    p.sendMessage(ChatColor.RED + "This barrel is unprotected!");
                 }
             }
         }

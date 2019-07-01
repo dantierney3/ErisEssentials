@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package torchdevelopments.erisessentials.Core.BarrelLocker.Listener;
+package torchdevelopments.erisessentials.Core.SingleBlockProtection.ChestLocker.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -39,17 +39,17 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.Plugin;
 
-public class BarrelInteractListener implements Listener {
+public class ChestInteractListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
     final String DELIMITER = ",";
 
     @EventHandler
-    public void onPlayerBarrelInteract(PlayerInteractEvent e)
+    public void onPlayerChestInteract(PlayerInteractEvent e)
     {
         if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK))
         {
-            if(e.getClickedBlock().getType().equals(Material.BARREL))
+            if(e.getClickedBlock().getType().equals(Material.CHEST))
             {
                 Player p = e.getPlayer();
                 String playerUUID = p.getUniqueId().toString();
@@ -62,7 +62,7 @@ public class BarrelInteractListener implements Listener {
                 String location = Integer.toString(x);
                 location += Integer.toString(y);
                 location += Integer.toString(z);
-                location = "barrel." + location;
+                location = "chest." + location;
 
                 String friends = null;
                 String[] friendsArray = null;
@@ -74,25 +74,25 @@ public class BarrelInteractListener implements Listener {
                     friendsArray = friends.split(DELIMITER);
                 }
 
-                if (plugin.getConfig().contains(location))
+              if (plugin.getConfig().contains(location))
                 {
-                    String lockedBarrel;
-                    lockedBarrel = (String) plugin.getConfig().get(location + ".owner");
+                    String lockedChest;
+                    lockedChest = (String) plugin.getConfig().get(location + ".owner");
 
-                    if(p.isOp() && !playerUUID.contentEquals(lockedBarrel))
+                    if(p.isOp() && !playerUUID.contentEquals(lockedChest))
                     {
                         String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
-                        p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "barrel");
+                        p.sendMessage(ChatColor.BLUE + "This is " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "chest");
 
                     }
-                    else if(!playerUUID.contentEquals(lockedBarrel) && (Boolean) plugin.getConfig().get(location + ".isPublic"))
+                    else if(!playerUUID.contentEquals(lockedChest) && (Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {
                         String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
-                        p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public barrel");
+                        p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public chest");
                     }
-                    else if(!playerUUID.contentEquals(lockedBarrel) && friendsArray != null)
+                    else if(!playerUUID.contentEquals(lockedChest) && friendsArray != null)
                     {
                         for(String uuid : friendsArray)
                         {
@@ -100,7 +100,7 @@ public class BarrelInteractListener implements Listener {
                             {
                                 String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
-                                p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "barrel");
+                                p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "chest");
 
                                 break;
                             }
@@ -108,15 +108,15 @@ public class BarrelInteractListener implements Listener {
                         // Break out of the if-else-if statements otherwise the last statement will also run true
                         return;
                     }
-                    else if(!playerUUID.contentEquals(lockedBarrel) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
+                    else if(!playerUUID.contentEquals(lockedChest) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {
                         e.setCancelled(true);
-                        p.sendMessage(ChatColor.RED + "This is not your barrel!");
+                        p.sendMessage(ChatColor.RED + "This is not your chest!");
                     }
                 }
                 else
                 {
-                    p.sendMessage(ChatColor.RED + "This barrel is unprotected!");
+                    p.sendMessage(ChatColor.RED + "This chest is unprotected!");
                 }
             }
         }

@@ -12,7 +12,7 @@ commands:
   ec:
     description: Open your Ender Chest
     Aliases: [enderchest]
-  inv:
+  inventory:
     description: View a target player's inventory
   broadcast:
     description: Broadcast a message to the server
@@ -22,5 +22,7 @@ commands:
     description: Commands to alter barrel protection
   furnace:
     description: Commands to alter furnace protection
+  hopper:
+    description: Commands to alter hopper protection
   invisible:
       description: Make yourself invisible
