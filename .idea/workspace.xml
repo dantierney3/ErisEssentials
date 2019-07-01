@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a72db8f-f776-4bf2-96af-582c934c3004" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Commands/ErisBarrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Commands/ErisBarrel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelBreakListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelBreakListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/BarrelLocker/Listener/BarrelPlaceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelPlaceListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Commands/ErisChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Commands/ErisChest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestBreakListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestBreakListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Listeners/ChestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Commands/ErisFurnace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Commands/ErisFurnace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceBreakListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceBreakListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnaceInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/FurnaceLocker/Listeners/FurnacePlaceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnacePlaceListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Commands/ErisHopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Commands/ErisHopper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperBreakListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperBreakListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperInteractListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperPlaceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperPlaceListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerInteractListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,80 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestInteractListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-806">
               <caret line="42" selection-start-line="42" selection-end-line="122" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperPlaceListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperBreakListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Commands/ErisChest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="45" selection-start-line="45" selection-end-line="384" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperInteractListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Commands/ErisHopper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4786">
-              <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="137" column="89" lean-forward="true" selection-start-line="137" selection-start-column="89" selection-end-line="137" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,17 +39,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerInteractListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="373">
+              <caret line="125" column="63" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,8 +63,78 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="459">
+              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerBreakListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#3751#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="58" column="59" lean-forward="true" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/copyright.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="26" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperBreakListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Commands/ErisChest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="45" selection-start-line="45" selection-end-line="384" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestBreakListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="42" selection-start-line="42" selection-end-line="42" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,9 +154,11 @@
       <find>targetfurnace</find>
       <find>targetbarrel</find>
       <find>lockedfurnace</find>
-      <find>chest</find>
       <find>CHEST</find>
       <find>Chest</find>
+      <find>chest</find>
+      <find>shulkerBreak(e)</find>
+      <find>shulkerCommandTree(p, args)</find>
     </findStrings>
     <replaceStrings>
       <replace>lockedBarrel</replace>
@@ -171,6 +170,10 @@
       <replace>hopper</replace>
       <replace>HOPPER</replace>
       <replace>Hopper</replace>
+      <replace>Shulker</replace>
+      <replace>shulker</replace>
+      <replace>shulkerInteract(e)</replace>
+      <replace>shulkerBreak(e)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -179,12 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestProtect/ChestPlaceListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestProtect/Entity/Chest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/CustomInventory/InventoryCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/InventoryCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Commands/ProtectChest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Commands/SetOwner.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Commands/RemoveProtection.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Commands/ErisChestTabCompleter.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestLocker/Commands/ErisChestTab2Completer.java" />
@@ -227,9 +224,15 @@
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/HopperLocker/Listeners/HopperPlaceListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/HopperLocker/Listeners/HopperInteractListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/HopperLocker/Commands/ErisHopper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerInteractListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperPlaceListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperInteractListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperBreakListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Commands/ErisHopper.java" />
         <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerInteractListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerBreakListener.java" />
       </list>
     </option>
   </component>
@@ -316,6 +319,91 @@
               <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="ChestLocker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="ChestLocker" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="ChestLocker" type="462c0819:PsiDirectoryNode" />
+              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="HopperLocker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="HopperLocker" type="462c0819:PsiDirectoryNode" />
+              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="ShulkerLocker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="ShulkerLocker" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="SingleBlockProtection" type="462c0819:PsiDirectoryNode" />
+              <item name="ShulkerLocker" type="462c0819:PsiDirectoryNode" />
+              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ErisEssentials" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ErisEssentials" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -393,7 +481,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.21055438" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.21055438" />
       <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" weight="0.1913646" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -421,34 +509,6 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.19349681" />
-      <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" weight="0.1913646" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.10074627" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -490,12 +550,22 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceBreakListener.java</url>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestProtect/ChestList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestProtect/ChestInteractListener.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ChestProtect/ChestPlaceListener.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/destroystokyo/paper/paper-api/1.14.1-R0.1-SNAPSHOT/paper-api-1.14.1-R0.1-20190527.161921-31-sources.jar!/org/bukkit/plugin/Plugin.java">
@@ -527,161 +597,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/copyright.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="26" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="136">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
-            <element signature="e#0#2163#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/MultiPlayerSleep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#3419#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/ClearTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#2147#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#2410#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/PlayerInventory/ViewPlayerInventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#3441#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Invisible/Invisibility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#3438#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Fly/Fly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#3603#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#4516#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#3018#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#2458#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnacePlaceListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#3603#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceBreakListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#3630#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelBreakListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="272">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelPlaceListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/MultiPlayerSleep/RainTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -692,70 +631,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/CustomGreetings/CustomGreeting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/PlayerInventory/ViewPlayerInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Invisible/Invisibility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Fly/Fly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/EnderChest/EnderChestCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/Broadcast/Broadcast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/onPlayerMoveAFK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/Util/Commands/AFK/Afk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="527">
           <caret line="57" column="38" lean-forward="true" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Commands/ErisFurnace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelInteractListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Commands/ErisBarrel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceInteractListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="103" column="141" selection-start-line="103" selection-start-column="141" selection-end-line="103" selection-end-column="141" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="42" selection-start-line="42" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestBreakListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="43" selection-start-line="43" selection-end-line="89" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -764,8 +713,121 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperPlaceListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#3621#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperInteractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#5551#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Commands/ErisHopper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#15416#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnacePlaceListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceInteractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="103" column="141" selection-start-line="103" selection-start-column="141" selection-end-line="103" selection-end-column="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Commands/ErisFurnace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="42" selection-start-line="42" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelInteractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelPlaceListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Commands/ErisBarrel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/BarrelLocker/Listener/BarrelBreakListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/FurnaceLocker/Listeners/FurnaceBreakListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -774,7 +836,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestInteractListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="-806">
           <caret line="42" selection-start-line="42" selection-end-line="122" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -782,10 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperInteractListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Listeners/ChestBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+        <state relative-caret-position="119">
+          <caret line="42" selection-start-line="42" selection-end-line="42" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -794,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Listeners/HopperBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state relative-caret-position="238">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -804,7 +866,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ChestLocker/Commands/ErisChest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="119">
           <caret line="45" selection-start-line="45" selection-end-line="384" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -812,10 +874,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/HopperLocker/Commands/ErisHopper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/copyright.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4786">
-          <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
+        <state>
+          <caret selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="125" column="63" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -824,29 +893,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        <state relative-caret-position="459">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerInteractListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="476">
+          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/ErisEssentials.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Listeners/ShulkerBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="137" column="89" lean-forward="true" selection-start-line="137" selection-start-column="89" selection-end-line="137" selection-end-column="89" />
+        <state relative-caret-position="476">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#3751#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/torchdevelopments/erisessentials/Core/SingleBlockProtection/ShulkerLocker/Commands/ErisShulker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="58" column="59" lean-forward="true" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -24,5 +24,7 @@ commands:
     description: Commands to alter furnace protection
   hopper:
     description: Commands to alter hopper protection
+  shulker:
+    description: Commands to alter shulker box protection
   invisible:
       description: Make yourself invisible

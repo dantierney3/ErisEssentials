@@ -37,6 +37,11 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - Players can now change their own hoppers to private
 - Players can now see the owner of a hopper
 - Players can now give friends access to their hoppers
+- Players can now change the owner of their Shulker Boxes
+- Players can now change their Shulker Boxes to public
+- Players can now change their Shulker Boxes to private
+- Players can now see the owner of a Shulker Box
+- Players can now give friend access to their Shulker Boxes
 
 ### [Changed]
 - Changed the command structure for chest protection
@@ -44,6 +49,8 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - Chest protection data now allows for a public property
 - Chest protection data now stores the chest owner name, so it is accessible when the owner is offline
 - Try-Catch blocks will now print a stack trace for easy issue reporting and fixing
+- Shulker Box Checks now check every variant of shulker box (16 colours + original)
+- Shulker box interaction will not tell you if the block is not a shulker box
 
 ### [Removed]
 - Old chest protection command classes
