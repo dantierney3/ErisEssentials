@@ -40,6 +40,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
+import java.util.List;
 import java.util.UUID;
 
 public class ErisFurnace implements CommandExecutor {
@@ -78,6 +79,20 @@ public class ErisFurnace implements CommandExecutor {
                                     break;
                             }
                             break;
+                        case "add":
+                            if(args[1].contentEquals("friend"))
+                            {
+                                furnaceAddFriend(p,args);
+                                break;
+                            }
+                            break;
+                        case "remove":
+                            if(args[1].contentEquals("friend"))
+                            {
+                                furnaceRemoveFriend(p, args);
+                                break;
+                            }
+                            break;
 
 
                     }
@@ -107,7 +122,7 @@ public class ErisFurnace implements CommandExecutor {
     private void furnaceSetOwner(Player p, String[] args)
     {
 
-        String location = getTargetfurnace(p);
+        String location = getTargetFurnace(p);
 
         if(p.isOp())
         {
@@ -138,13 +153,14 @@ public class ErisFurnace implements CommandExecutor {
 
     private void furnaceSetPublic(Player p, String[] args)
     {
-        String location = getTargetfurnace(p);
+        String location = getTargetFurnace(p);
 
         if(!(boolean) plugin.getConfig().get(location + ".isPublic"))
         {
             if(p.isOp())
             {
                 plugin.getConfig().set(location + ".isPublic", true);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
                         + "'s " + ChatColor.BLUE +"furnace to " + ChatColor.RED + "PUBLIC");
 
@@ -159,6 +175,7 @@ public class ErisFurnace implements CommandExecutor {
             else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
             {
                 plugin.getConfig().set(location + ".isPublic", true);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set your furnace to " + ChatColor.RED + "PUBLIC");
             }
             else
@@ -174,13 +191,14 @@ public class ErisFurnace implements CommandExecutor {
 
     private void furnaceSetPrivate(Player p, String[] args)
     {
-        String location = getTargetfurnace(p);
+        String location = getTargetFurnace(p);
 
         if((boolean) plugin.getConfig().get(location + ".isPublic"))
         {
             if(p.isOp())
             {
                 plugin.getConfig().set(location + ".isPublic", false);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
                         + "'s " + ChatColor.BLUE +"furnace to " + ChatColor.RED + "PRIVATE");
 
@@ -195,6 +213,7 @@ public class ErisFurnace implements CommandExecutor {
             else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
             {
                 plugin.getConfig().set(location + ".isPublic", false);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set your furnace to " + ChatColor.RED + "PRIVATE");
             }
             else
@@ -210,7 +229,7 @@ public class ErisFurnace implements CommandExecutor {
 
     private void furnaceGetOwner(Player p, String[] args)
     {
-        String location = getTargetfurnace(p);
+        String location = getTargetFurnace(p);
 
         if(plugin.getConfig().contains(location))
         {
@@ -222,7 +241,118 @@ public class ErisFurnace implements CommandExecutor {
         }
     }
 
-    private String getTargetfurnace(Player p)
+    private void furnaceAddFriend(Player p, String[] args)
+    {
+        String location = getTargetFurnace(p);
+        if(plugin.getConfig().contains(location))
+        {
+            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+            String playerUUID = p.getUniqueId().toString();
+            Player target = Bukkit.getPlayerExact(args[2]);
+            if(target != null)
+            {
+                String targetUUID = target.getUniqueId().toString();
+                if(playerUUID.contentEquals(ownerUUID))
+                {
+                    if(plugin.getConfig().contains(location + ".friends"))
+                    {
+                        String friends = plugin.getConfig().get(location + ".friends").toString();
+                        List<String> friendsList = null;
+                        String[] friendsArray = friends.split(",");
+                        for(String friend : friendsArray)
+                        {
+                            friendsList.add(friend);
+                        }
+                        friendsList.add(targetUUID);
+
+                        String updatedFriends = null;
+                        for(String friend : friendsList)
+                        {
+                            updatedFriends = updatedFriends + friend + ",";
+                        }
+
+                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
+                                + ChatColor.BLUE + " access to that furnace");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " gave you access to that furnace");
+
+                        plugin.getConfig().set(location + ".friends", updatedFriends);
+                        plugin.saveConfig();
+                    }
+                    else
+                    {
+                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
+                                + ChatColor.BLUE + " access to that furnace");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " gave you access to that furnace");
+
+                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
+                        plugin.saveConfig();
+                    }
+
+                }
+            }
+        }
+    }
+
+    private void furnaceRemoveFriend(Player p, String[] args)
+    {
+        String location = getTargetFurnace(p);
+        if(plugin.getConfig().contains(location))
+        {
+            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+            String playerUUID = p.getUniqueId().toString();
+            Player target = Bukkit.getPlayerExact(args[2]);
+            if(target != null)
+            {
+                String targetUUID = target.getUniqueId().toString();
+                if(playerUUID.contentEquals(ownerUUID))
+                {
+                    if(plugin.getConfig().contains(location + ".friends"))
+                    {
+                        String friends = plugin.getConfig().get(location + ".friends").toString();
+                        List<String> friendsList = null;
+                        String[] friendsArray = friends.split(",");
+                        for(String friend : friendsArray)
+                        {
+                            friendsList.add(friend);
+                        }
+                        if(friendsList.contains(targetUUID))
+                        {
+                            friendsList.remove(targetUUID);
+                        }
+
+                        String updatedFriends = null;
+                        for(String friend : friendsList)
+                        {
+                            updatedFriends = updatedFriends + friend + ",";
+                        }
+
+                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
+                                + ChatColor.BLUE + "access to that furnace");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " revoked your access to that furnace");
+
+                        plugin.getConfig().set(location + ".friends", updatedFriends);
+                        plugin.saveConfig();
+                    }
+                    else
+                    {
+                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
+                                + ChatColor.BLUE + "access to that furnace");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " revoked your access to that furnace");
+
+                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
+                        plugin.saveConfig();
+                    }
+
+                }
+            }
+        }
+    }
+
+    private String getTargetFurnace(Player p)
     {
         Block targetFurnace = p.getTargetBlockExact(5);
         Location targetFurnaceLoc = targetFurnace.getLocation();

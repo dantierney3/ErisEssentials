@@ -42,6 +42,7 @@ import org.bukkit.plugin.Plugin;
 public class BarrelInteractListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
+    final String DELIMITER = ",";
 
     @EventHandler
     public void onPlayerBarrelInteract(PlayerInteractEvent e)
@@ -63,6 +64,16 @@ public class BarrelInteractListener implements Listener {
                 location += Integer.toString(z);
                 location = "barrel." + location;
 
+                String friends = null;
+                String[] friendsArray = null;
+
+                if (plugin.getConfig().contains(location + ".friends"))
+                {
+                    friends = plugin.getConfig().get(location + ".friends").toString();
+
+                    friendsArray = friends.split(DELIMITER);
+                }
+
                 if (plugin.getConfig().contains(location))
                 {
                     String lockedBarrel;
@@ -80,6 +91,22 @@ public class BarrelInteractListener implements Listener {
                         String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
                         p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public barrel");
+                    }
+                    else if(!playerUUID.contentEquals(lockedBarrel) && friendsArray != null)
+                    {
+                        for(String uuid : friendsArray)
+                        {
+                            if(playerUUID.contentEquals(uuid))
+                            {
+                                String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
+
+                                p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "barrel");
+
+                                break;
+                            }
+                        }
+                        // Break out of the if-else-if statements otherwise the last statement will also run true
+                        return;
                     }
                     else if(!playerUUID.contentEquals(lockedBarrel) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {

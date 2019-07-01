@@ -33,13 +33,36 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
+import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomFarewell implements Listener {
 
     @EventHandler
     void onPlayerLeave(PlayerQuitEvent e)
     {
+
         Player player = e.getPlayer();
+
+        ArrayList<Player> afkPlayers = Afk.getAfkPlayers();
+
+        // Make sure the player isn't AFK when they leave the server otherwise they stay invulnerable
+
+        if(afkPlayers.contains(player))
+        {
+            player.setInvulnerable(false);
+            player.setCollidable(true);
+
+            afkPlayers.remove(player);
+
+            player.setDisplayName(ChatColor.stripColor(player.getDisplayName()));
+            player.setPlayerListName(ChatColor.stripColor(player.getPlayerListName()));
+        }
+
+        Afk.setAfkPlayers(afkPlayers);
+
         e.setQuitMessage("Thanks for stopping by " + ChatColor.GOLD + player.getDisplayName());
     }
 }

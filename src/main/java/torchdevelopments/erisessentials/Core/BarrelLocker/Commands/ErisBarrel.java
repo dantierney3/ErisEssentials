@@ -39,6 +39,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
+import java.util.List;
 import java.util.UUID;
 
 public class ErisBarrel implements CommandExecutor {
@@ -61,7 +62,7 @@ public class ErisBarrel implements CommandExecutor {
                     switch(args[0])
                     {
                         case "get":
-                            barrelGetOwner(p, args);
+                            barrelGetOwner(p);
                             break;
                         case "set":
                             switch(args[1])
@@ -70,11 +71,26 @@ public class ErisBarrel implements CommandExecutor {
                                     barrelSetOwner(p, args);
                                     break;
                                 case "public":
-                                    barrelSetPublic(p, args);
+                                    barrelSetPublic(p);
                                     break;
                                 case "private":
-                                    barrelSetPrivate(p,args);
+                                    barrelSetPrivate(p);
                                     break;
+                            }
+                            break;
+                        case "add":
+                            if(args[1].contentEquals("friend"))
+                            {
+                                barrelAddFriend(p, args);
+                                break;
+                            }
+                            break;
+                        case "remove" :
+
+                            if(args[1].contentEquals("friend"))
+                            {
+                                barrelRemoveFriend(p, args);
+                                break;
                             }
                             break;
 
@@ -97,7 +113,8 @@ public class ErisBarrel implements CommandExecutor {
         {
             Player p = (Player) sender;
             p.sendMessage(ChatColor.RED + "Invalid Arguments!");
-            p.sendMessage(ChatColor.RED + "/barrel <get/set/remove> <owner>");
+            p.sendMessage(ChatColor.RED + "/barrel <get/set/add/remove> <owner/friend/public/private>");
+            e.printStackTrace();
         }
 
         return false;
@@ -106,7 +123,7 @@ public class ErisBarrel implements CommandExecutor {
     private void barrelSetOwner(Player p, String[] args)
     {
 
-        String location = getTargetbarrel(p);
+        String location = getTargetBarrel(p);
 
         if(p.isOp())
         {
@@ -135,15 +152,16 @@ public class ErisBarrel implements CommandExecutor {
         }
     } // End barrelSetOwner
 
-    private void barrelSetPublic(Player p, String[] args)
+    private void barrelSetPublic(Player p)
     {
-        String location = getTargetbarrel(p);
+        String location = getTargetBarrel(p);
 
         if(!(boolean) plugin.getConfig().get(location + ".isPublic"))
         {
             if(p.isOp())
             {
                 plugin.getConfig().set(location + ".isPublic", true);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
                         + "'s " + ChatColor.BLUE +"barrel to " + ChatColor.RED + "PUBLIC");
 
@@ -158,6 +176,7 @@ public class ErisBarrel implements CommandExecutor {
             else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
             {
                 plugin.getConfig().set(location + ".isPublic", true);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set your barrel to " + ChatColor.RED + "PUBLIC");
             }
             else
@@ -171,15 +190,16 @@ public class ErisBarrel implements CommandExecutor {
         }
     }
 
-    private void barrelSetPrivate(Player p, String[] args)
+    private void barrelSetPrivate(Player p)
     {
-        String location = getTargetbarrel(p);
+        String location = getTargetBarrel(p);
 
         if((boolean) plugin.getConfig().get(location + ".isPublic"))
         {
             if(p.isOp())
             {
                 plugin.getConfig().set(location + ".isPublic", false);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
                         + "'s " + ChatColor.BLUE +"barrel to " + ChatColor.RED + "PRIVATE");
 
@@ -194,6 +214,7 @@ public class ErisBarrel implements CommandExecutor {
             else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
             {
                 plugin.getConfig().set(location + ".isPublic", false);
+                plugin.saveConfig();
                 p.sendMessage(ChatColor.BLUE + "You set your barrel to " + ChatColor.RED + "PRIVATE");
             }
             else
@@ -207,9 +228,9 @@ public class ErisBarrel implements CommandExecutor {
         }
     }
 
-    private void barrelGetOwner(Player p, String[] args)
+    private void barrelGetOwner(Player p)
     {
-        String location = getTargetbarrel(p);
+        String location = getTargetBarrel(p);
 
         if(plugin.getConfig().contains(location))
         {
@@ -221,7 +242,118 @@ public class ErisBarrel implements CommandExecutor {
         }
     }
 
-    private String getTargetbarrel(Player p)
+    private void barrelAddFriend(Player p, String[] args)
+    {
+        String location = getTargetBarrel(p);
+        if(plugin.getConfig().contains(location))
+        {
+            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+            String playerUUID = p.getUniqueId().toString();
+            Player target = Bukkit.getPlayerExact(args[2]);
+            if(target != null)
+            {
+                String targetUUID = target.getUniqueId().toString();
+                if(playerUUID.contentEquals(ownerUUID))
+                {
+                    if(plugin.getConfig().contains(location + ".friends"))
+                    {
+                        String friends = plugin.getConfig().get(location + ".friends").toString();
+                        List<String> friendsList = null;
+                        String[] friendsArray = friends.split(",");
+                        for(String friend : friendsArray)
+                        {
+                            friendsList.add(friend);
+                        }
+                        friendsList.add(targetUUID);
+
+                        String updatedFriends = null;
+                        for(String friend : friendsList)
+                        {
+                            updatedFriends = updatedFriends + friend + ",";
+                        }
+
+                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
+                                + ChatColor.BLUE + " access to that barrel");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " gave you access to that barrel");
+
+                        plugin.getConfig().set(location + ".friends", updatedFriends);
+                        plugin.saveConfig();
+                    }
+                    else
+                    {
+                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
+                                + ChatColor.BLUE + " access to that barrel");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " gave you access to that barrel");
+
+                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
+                        plugin.saveConfig();
+                    }
+
+                }
+            }
+        }
+    }
+
+    private void barrelRemoveFriend(Player p, String[] args)
+    {
+        String location = getTargetBarrel(p);
+        if(plugin.getConfig().contains(location))
+        {
+            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+            String playerUUID = p.getUniqueId().toString();
+            Player target = Bukkit.getPlayerExact(args[2]);
+            if(target != null)
+            {
+                String targetUUID = target.getUniqueId().toString();
+                if(playerUUID.contentEquals(ownerUUID))
+                {
+                    if(plugin.getConfig().contains(location + ".friends"))
+                    {
+                        String friends = plugin.getConfig().get(location + ".friends").toString();
+                        List<String> friendsList = null;
+                        String[] friendsArray = friends.split(",");
+                        for(String friend : friendsArray)
+                        {
+                            friendsList.add(friend);
+                        }
+                        if(friendsList.contains(targetUUID))
+                        {
+                            friendsList.remove(targetUUID);
+                        }
+
+                        String updatedFriends = null;
+                        for(String friend : friendsList)
+                        {
+                            updatedFriends = updatedFriends + friend + ",";
+                        }
+
+                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
+                                + ChatColor.BLUE + "access to that barrel");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " revoked your access to that barrel");
+
+                        plugin.getConfig().set(location + ".friends", updatedFriends);
+                        plugin.saveConfig();
+                    }
+                    else
+                    {
+                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
+                                + ChatColor.BLUE + "access to that barrel");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " revoked your access to that barrel");
+
+                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
+                        plugin.saveConfig();
+                    }
+
+                }
+            }
+        }
+    }
+
+    private String getTargetBarrel(Player p)
     {
         Block targetBarrel = p.getTargetBlockExact(5);
         Location targetBarrelLoc = targetBarrel.getLocation();

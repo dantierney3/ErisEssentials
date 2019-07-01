@@ -44,6 +44,7 @@ import java.util.UUID;
 public class ChestInteractListener implements Listener {
 
     Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
+    final String DELIMITER = ",";
 
     @EventHandler
     public void onPlayerChestInteract(PlayerInteractEvent e)
@@ -65,7 +66,17 @@ public class ChestInteractListener implements Listener {
                 location += Integer.toString(z);
                 location = "chest." + location;
 
-                if (plugin.getConfig().contains(location))
+                String friends = null;
+                String[] friendsArray = null;
+
+                if (plugin.getConfig().contains(location + ".friends"))
+                {
+                    friends = plugin.getConfig().get(location + ".friends").toString();
+
+                    friendsArray = friends.split(DELIMITER);
+                }
+
+              if (plugin.getConfig().contains(location))
                 {
                     String lockedChest;
                     lockedChest = (String) plugin.getConfig().get(location + ".owner");
@@ -82,6 +93,22 @@ public class ChestInteractListener implements Listener {
                         String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
 
                         p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "public chest");
+                    }
+                    else if(!playerUUID.contentEquals(lockedChest) && friendsArray != null)
+                    {
+                        for(String uuid : friendsArray)
+                        {
+                            if(playerUUID.contentEquals(uuid))
+                            {
+                                String ownerName = (String) plugin.getConfig().get(location + ".ownerName");
+
+                                p.sendMessage(ChatColor.BLUE + "Accessing " + ChatColor.GOLD + ownerName +  "'s " + ChatColor.BLUE + "chest");
+
+                                break;
+                            }
+                        }
+                        // Break out of the if-else-if statements otherwise the last statement will also run true
+                        return;
                     }
                     else if(!playerUUID.contentEquals(lockedChest) && !(Boolean) plugin.getConfig().get(location + ".isPublic"))
                     {

@@ -39,11 +39,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
+import java.util.List;
 import java.util.UUID;
 
 public class ErisChest implements CommandExecutor {
 
-    Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
+    private Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -61,7 +62,7 @@ public class ErisChest implements CommandExecutor {
                     switch(args[0])
                     {
                         case "get":
-                            chestGetOwner(p, args);
+                            chestGetOwner(p);
                             break;
                         case "set":
                             switch(args[1])
@@ -70,11 +71,26 @@ public class ErisChest implements CommandExecutor {
                                     chestSetOwner(p, args);
                                     break;
                                 case "public":
-                                    chestSetPublic(p, args);
+                                    chestSetPublic(p);
                                     break;
                                 case "private":
-                                    chestSetPrivate(p,args);
+                                    chestSetPrivate(p);
                                     break;
+                            }
+                            break;
+                        case "add":
+                            if(args[1].contentEquals("friend"))
+                            {
+                                chestAddFriend(p, args);
+                                break;
+                            }
+                            break;
+                        case "remove" :
+
+                            if(args[1].contentEquals("friend"))
+                            {
+                                chestRemoveFriend(p, args);
+                                break;
                             }
                             break;
 
@@ -96,8 +112,11 @@ public class ErisChest implements CommandExecutor {
         catch (NullPointerException e)
         {
             Player p = (Player) sender;
+            int length = args.length;
             p.sendMessage(ChatColor.RED + "Invalid Arguments!");
-            p.sendMessage(ChatColor.RED + "/chest <get/set/remove> <owner>");
+            p.sendMessage(ChatColor.RED + "/chest <get/set/add/remove> <owner/friend/public/private>");
+            p.sendMessage(Integer.toString(length));
+            e.printStackTrace();
         }
 
         return false;
@@ -135,7 +154,7 @@ public class ErisChest implements CommandExecutor {
         }
     } // End chestSetOwner
 
-    private void chestSetPublic(Player p, String[] args)
+    private void chestSetPublic(Player p)
     {
         String location = getTargetChest(p);
 
@@ -146,6 +165,7 @@ public class ErisChest implements CommandExecutor {
                 plugin.getConfig().set(location + ".isPublic", true);
                 p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
                         + "'s " + ChatColor.BLUE +"chest to " + ChatColor.RED + "PUBLIC");
+                plugin.saveConfig();
 
                 UUID ownerUUID = UUID.fromString(plugin.getConfig().get(location + ".owner").toString());
                 Player owner = Bukkit.getPlayer(ownerUUID);
@@ -159,6 +179,7 @@ public class ErisChest implements CommandExecutor {
             {
                 plugin.getConfig().set(location + ".isPublic", true);
                 p.sendMessage(ChatColor.BLUE + "You set your chest to " + ChatColor.RED + "PUBLIC");
+                plugin.saveConfig();
             }
             else
             {
@@ -171,7 +192,7 @@ public class ErisChest implements CommandExecutor {
         }
     }
 
-    private void chestSetPrivate(Player p, String[] args)
+    private void chestSetPrivate(Player p)
     {
         String location = getTargetChest(p);
 
@@ -182,6 +203,7 @@ public class ErisChest implements CommandExecutor {
                 plugin.getConfig().set(location + ".isPublic", false);
                 p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
                         + "'s " + ChatColor.BLUE +"chest to " + ChatColor.RED + "PRIVATE");
+                plugin.saveConfig();
 
                 UUID ownerUUID = UUID.fromString(plugin.getConfig().get(location + ".owner").toString());
                 Player owner = Bukkit.getPlayer(ownerUUID);
@@ -189,12 +211,14 @@ public class ErisChest implements CommandExecutor {
                 if (owner != null)
                 {
                     owner.sendMessage(ChatColor.GOLD + p.getDisplayName() + ChatColor.BLUE + " set your chest to" + ChatColor.RED + " PRIVATE");
+                    plugin.saveConfig();
                 }
             }
             else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
             {
                 plugin.getConfig().set(location + ".isPublic", false);
                 p.sendMessage(ChatColor.BLUE + "You set your chest to " + ChatColor.RED + "PRIVATE");
+                plugin.saveConfig();
             }
             else
             {
@@ -207,7 +231,7 @@ public class ErisChest implements CommandExecutor {
         }
     }
 
-    private void chestGetOwner(Player p, String[] args)
+    private void chestGetOwner(Player p)
     {
         String location = getTargetChest(p);
 
@@ -218,6 +242,117 @@ public class ErisChest implements CommandExecutor {
 
             p.sendMessage(ChatColor.BLUE + "That chest belongs to " + ChatColor.GOLD + ownerName);
 
+        }
+    }
+
+    private void chestAddFriend(Player p, String[] args)
+    {
+        String location = getTargetChest(p);
+        if(plugin.getConfig().contains(location))
+        {
+            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+            String playerUUID = p.getUniqueId().toString();
+            Player target = Bukkit.getPlayerExact(args[2]);
+            if(target != null)
+            {
+                String targetUUID = target.getUniqueId().toString();
+                if(playerUUID.contentEquals(ownerUUID))
+                {
+                    if(plugin.getConfig().contains(location + ".friends"))
+                    {
+                        String friends = plugin.getConfig().get(location + ".friends").toString();
+                        List<String> friendsList = null;
+                        String[] friendsArray = friends.split(",");
+                        for(String friend : friendsArray)
+                        {
+                            friendsList.add(friend);
+                        }
+                        friendsList.add(targetUUID);
+
+                        String updatedFriends = null;
+                        for(String friend : friendsList)
+                        {
+                            updatedFriends = updatedFriends + friend + ",";
+                        }
+
+                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
+                                + ChatColor.BLUE + " access to that chest");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " gave you access to that chest");
+
+                        plugin.getConfig().set(location + ".friends", updatedFriends);
+                        plugin.saveConfig();
+                    }
+                    else
+                    {
+                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
+                                + ChatColor.BLUE + " access to that chest");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " gave you access to that chest");
+
+                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
+                        plugin.saveConfig();
+                    }
+
+                }
+            }
+        }
+    }
+
+    private void chestRemoveFriend(Player p, String[] args)
+    {
+        String location = getTargetChest(p);
+        if(plugin.getConfig().contains(location))
+        {
+            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+            String playerUUID = p.getUniqueId().toString();
+            Player target = Bukkit.getPlayerExact(args[2]);
+            if(target != null)
+            {
+                String targetUUID = target.getUniqueId().toString();
+                if(playerUUID.contentEquals(ownerUUID))
+                {
+                    if(plugin.getConfig().contains(location + ".friends"))
+                    {
+                        String friends = plugin.getConfig().get(location + ".friends").toString();
+                        List<String> friendsList = null;
+                        String[] friendsArray = friends.split(",");
+                        for(String friend : friendsArray)
+                        {
+                            friendsList.add(friend);
+                        }
+                        if(friendsList.contains(targetUUID))
+                        {
+                            friendsList.remove(targetUUID);
+                        }
+
+                        String updatedFriends = null;
+                        for(String friend : friendsList)
+                        {
+                            updatedFriends = updatedFriends + friend + ",";
+                        }
+
+                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
+                                + ChatColor.BLUE + "access to that chest");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " revoked your access to that chest");
+
+                        plugin.getConfig().set(location + ".friends", updatedFriends);
+                        plugin.saveConfig();
+                    }
+                    else
+                    {
+                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
+                                + ChatColor.BLUE + "access to that chest");
+                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
+                                + ChatColor.BLUE + " revoked your access to that chest");
+
+                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
+                        plugin.saveConfig();
+                    }
+
+                }
+            }
         }
     }
 
