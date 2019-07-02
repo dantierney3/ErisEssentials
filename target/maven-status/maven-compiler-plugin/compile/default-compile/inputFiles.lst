@@ -1,5 +1,7 @@
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\AddFriend.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerBreakListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestBreakListener.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetOwner.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listeners\HopperPlaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask.java
@@ -9,6 +11,7 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\C
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\EnderChest\EnderChestCommand.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerInteractListener.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\GetOwner.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomFarewell.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask.java
@@ -18,6 +21,7 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Single
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Listener\BarrelPlaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Listeners\FurnaceInteractListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMoveAFK.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetPublic.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\ErisEssentials.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Commands\ErisHopper.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.java
@@ -29,5 +33,8 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Single
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listeners\HopperInteractListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerInventory.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Listener\BarrelBreakListener.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\GetTargetBlock.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\RemoveFriend.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetPrivate.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestInteractListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Commands\ErisBarrel.java

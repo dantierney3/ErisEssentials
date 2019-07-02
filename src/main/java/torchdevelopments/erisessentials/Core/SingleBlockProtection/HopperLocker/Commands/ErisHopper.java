@@ -42,6 +42,14 @@ import org.bukkit.plugin.Plugin;
 import java.util.List;
 import java.util.UUID;
 
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.AddFriend.addFriendToBlock;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.GetTargetBlock.targetBlockLocation;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.GetOwner.*;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.RemoveFriend.removeFriendFromBlock;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.SetOwner.setBlockOwner;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.SetPrivate.setBlockPrivate;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.SetPublic.setBlockPublic;
+
 public class ErisHopper implements CommandExecutor {
 
 
@@ -60,29 +68,32 @@ public class ErisHopper implements CommandExecutor {
 
                 if(p.getTargetBlock(5).getType().equals(Material.HOPPER))
                 {
+                    String block = "hopper";
+                    String location = "hopper." + targetBlockLocation(p);
+
                     switch(args[0])
                     {
                         case "get":
-                            hopperGetOwner(p);
+                            getBlockOwner(p, location,block,plugin);
                             break;
                         case "set":
                             switch(args[1])
                             {
                                 case "owner":
-                                    hopperSetOwner(p, args);
+                                    setBlockOwner(p,location,block,plugin,args);
                                     break;
                                 case "public":
-                                    hopperSetPublic(p);
+                                    setBlockPublic(p,location,block,plugin);
                                     break;
                                 case "private":
-                                    hopperSetPrivate(p);
+                                    setBlockPrivate(p,location,block,plugin);
                                     break;
                             }
                             break;
                         case "add":
                             if(args[1].contentEquals("friend"))
                             {
-                                hopperAddFriend(p, args);
+                                addFriendToBlock(p,location,block,plugin,args);
                                 break;
                             }
                             break;
@@ -90,11 +101,10 @@ public class ErisHopper implements CommandExecutor {
 
                             if(args[1].contentEquals("friend"))
                             {
-                                hopperRemoveFriend(p, args);
+                                removeFriendFromBlock(p,location,block,plugin,args);
                                 break;
                             }
                             break;
-
 
                     }
                 } // End if
@@ -123,265 +133,4 @@ public class ErisHopper implements CommandExecutor {
         return false;
     }
 
-    private void hopperSetOwner(Player p, String[] args)
-    {
-
-        String location = getTargetHopper(p);
-
-        if(p.isOp())
-        {
-
-            Player target = Bukkit.getPlayerExact(args[2]);
-
-            if(plugin.getConfig().contains(location)) // Changes the owner if the hopper is protected
-            {
-                changeHopperOwner(p, target, location);
-            }
-            else // Creates a protected hopper if the block is unprotected
-            {
-                changeHopperOwner(p, target, location);
-            }
-        }
-        else
-        {
-            Player target = Bukkit.getPlayerExact(args[2]);
-            String hopperOwner = location + ".owner";
-
-            // Checks if the hopper is protected and the sender owns the hopper
-            if(plugin.getConfig().contains(location) && plugin.getConfig().get(hopperOwner).equals(p.getUniqueId().toString()))
-            {
-                changeHopperOwner(p, target, location);
-            }
-        }
-    } // End hopperSetOwner
-
-    private void hopperSetPublic(Player p)
-    {
-        String location = getTargetHopper(p);
-
-        if(!(boolean) plugin.getConfig().get(location + ".isPublic"))
-        {
-            if(p.isOp())
-            {
-                plugin.getConfig().set(location + ".isPublic", true);
-                p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
-                        + "'s " + ChatColor.BLUE +"hopper to " + ChatColor.RED + "PUBLIC");
-                plugin.saveConfig();
-
-                UUID ownerUUID = UUID.fromString(plugin.getConfig().get(location + ".owner").toString());
-                Player owner = Bukkit.getPlayer(ownerUUID);
-
-                if (owner != null)
-                {
-                    owner.sendMessage(ChatColor.GOLD + p.getDisplayName() + ChatColor.BLUE + " set your hopper to" + ChatColor.RED + " PUBLIC");
-                }
-            }
-            else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
-            {
-                plugin.getConfig().set(location + ".isPublic", true);
-                p.sendMessage(ChatColor.BLUE + "You set your hopper to " + ChatColor.RED + "PUBLIC");
-                plugin.saveConfig();
-            }
-            else
-            {
-                p.sendMessage(ChatColor.RED + "That is not your hopper");
-            }
-        }
-        else
-        {
-            p.sendMessage(ChatColor.RED + "That hopper is already public");
-        }
-    }
-
-    private void hopperSetPrivate(Player p)
-    {
-        String location = getTargetHopper(p);
-
-        if((boolean) plugin.getConfig().get(location + ".isPublic"))
-        {
-            if(p.isOp())
-            {
-                plugin.getConfig().set(location + ".isPublic", false);
-                p.sendMessage(ChatColor.BLUE + "You set " + plugin.getConfig().get(location + ".ownerName").toString()
-                        + "'s " + ChatColor.BLUE +"hopper to " + ChatColor.RED + "PRIVATE");
-                plugin.saveConfig();
-
-                UUID ownerUUID = UUID.fromString(plugin.getConfig().get(location + ".owner").toString());
-                Player owner = Bukkit.getPlayer(ownerUUID);
-
-                if (owner != null)
-                {
-                    owner.sendMessage(ChatColor.GOLD + p.getDisplayName() + ChatColor.BLUE + " set your hopper to" + ChatColor.RED + " PRIVATE");
-                    plugin.saveConfig();
-                }
-            }
-            else if(p.getUniqueId().toString().equals(plugin.getConfig().get(location + ".owner").toString()))
-            {
-                plugin.getConfig().set(location + ".isPublic", false);
-                p.sendMessage(ChatColor.BLUE + "You set your hopper to " + ChatColor.RED + "PRIVATE");
-                plugin.saveConfig();
-            }
-            else
-            {
-                p.sendMessage(ChatColor.RED + "That is not your hopper");
-            }
-        }
-        else
-        {
-            p.sendMessage(ChatColor.RED + "That hopper is already private");
-        }
-    }
-
-    private void hopperGetOwner(Player p)
-    {
-        String location = getTargetHopper(p);
-
-        if(plugin.getConfig().contains(location))
-        {
-            String ownerName = plugin.getConfig().get(location + ".ownerName").toString();
-
-
-            p.sendMessage(ChatColor.BLUE + "That hopper belongs to " + ChatColor.GOLD + ownerName);
-
-        }
-    }
-
-    private void hopperAddFriend(Player p, String[] args)
-    {
-        String location = getTargetHopper(p);
-        if(plugin.getConfig().contains(location))
-        {
-            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
-            String playerUUID = p.getUniqueId().toString();
-            Player target = Bukkit.getPlayerExact(args[2]);
-            if(target != null)
-            {
-                String targetUUID = target.getUniqueId().toString();
-                if(playerUUID.contentEquals(ownerUUID))
-                {
-                    if(plugin.getConfig().contains(location + ".friends"))
-                    {
-                        String friends = plugin.getConfig().get(location + ".friends").toString();
-                        List<String> friendsList = null;
-                        String[] friendsArray = friends.split(",");
-                        for(String friend : friendsArray)
-                        {
-                            friendsList.add(friend);
-                        }
-                        friendsList.add(targetUUID);
-
-                        String updatedFriends = null;
-                        for(String friend : friendsList)
-                        {
-                            updatedFriends = updatedFriends + friend + ",";
-                        }
-
-                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
-                                + ChatColor.BLUE + " access to that hopper");
-                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
-                                + ChatColor.BLUE + " gave you access to that hopper");
-
-                        plugin.getConfig().set(location + ".friends", updatedFriends);
-                        plugin.saveConfig();
-                    }
-                    else
-                    {
-                        p.sendMessage(ChatColor.BLUE + "You gave " + ChatColor.GOLD +  target.getDisplayName()
-                                + ChatColor.BLUE + " access to that hopper");
-                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
-                                + ChatColor.BLUE + " gave you access to that hopper");
-
-                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
-                        plugin.saveConfig();
-                    }
-
-                }
-            }
-        }
-    }
-
-    private void hopperRemoveFriend(Player p, String[] args)
-    {
-        String location = getTargetHopper(p);
-        if(plugin.getConfig().contains(location))
-        {
-            String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
-            String playerUUID = p.getUniqueId().toString();
-            Player target = Bukkit.getPlayerExact(args[2]);
-            if(target != null)
-            {
-                String targetUUID = target.getUniqueId().toString();
-                if(playerUUID.contentEquals(ownerUUID))
-                {
-                    if(plugin.getConfig().contains(location + ".friends"))
-                    {
-                        String friends = plugin.getConfig().get(location + ".friends").toString();
-                        List<String> friendsList = null;
-                        String[] friendsArray = friends.split(",");
-                        for(String friend : friendsArray)
-                        {
-                            friendsList.add(friend);
-                        }
-                        if(friendsList.contains(targetUUID))
-                        {
-                            friendsList.remove(targetUUID);
-                        }
-
-                        String updatedFriends = null;
-                        for(String friend : friendsList)
-                        {
-                            updatedFriends = updatedFriends + friend + ",";
-                        }
-
-                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
-                                + ChatColor.BLUE + "access to that hopper");
-                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
-                                + ChatColor.BLUE + " revoked your access to that hopper");
-
-                        plugin.getConfig().set(location + ".friends", updatedFriends);
-                        plugin.saveConfig();
-                    }
-                    else
-                    {
-                        p.sendMessage(ChatColor.BLUE + "You revoked " + ChatColor.GOLD +  target.getDisplayName() + "'s "
-                                + ChatColor.BLUE + "access to that hopper");
-                        target.sendMessage(ChatColor.GOLD +  p.getDisplayName()
-                                + ChatColor.BLUE + " revoked your access to that hopper");
-
-                        plugin.getConfig().set(location + ".friends", targetUUID + ",");
-                        plugin.saveConfig();
-                    }
-
-                }
-            }
-        }
-    }
-
-    private String getTargetHopper(Player p)
-    {
-        Block targetHopper = p.getTargetBlockExact(5);
-        Location targetHopperLoc = targetHopper.getLocation();
-
-        int x = targetHopperLoc.getBlockX();
-        int y = targetHopperLoc.getBlockY();
-        int z = targetHopperLoc.getBlockZ();
-
-        String location = Integer.toString(x);
-        location += Integer.toString(y);
-        location += Integer.toString(z);
-
-        location = "hopper." + location;
-
-        return location;
-    }
-
-    private void changeHopperOwner (Player p, Player target, String location)
-    {
-        plugin.getConfig().set(location + ".owner", target.getUniqueId().toString());
-        plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(target.getDisplayName()));
-        plugin.getConfig().set(location + ".isPublic", false);
-        p.sendMessage(ChatColor.BLUE + "You changed the hopper owner to " + ChatColor.GOLD + target.getDisplayName());
-        target.sendMessage(ChatColor.GOLD + p.getDisplayName() + ChatColor.BLUE + " made you the hopper owner");
-        plugin.saveConfig();
-    }
 }
