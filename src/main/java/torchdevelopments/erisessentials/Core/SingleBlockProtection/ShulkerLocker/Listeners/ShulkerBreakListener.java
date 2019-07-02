@@ -118,10 +118,6 @@ public class ShulkerBreakListener implements Listener {
         {
             shulkerBreak(e);
         } // End if
-        else
-        {
-            p.sendMessage(ChatColor.RED + "That block is not a Shulker box!");
-        }
 
     }
     

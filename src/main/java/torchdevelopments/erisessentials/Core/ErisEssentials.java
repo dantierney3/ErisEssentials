@@ -94,7 +94,6 @@ public final class ErisEssentials extends JavaPlugin{
             getServer().getPluginManager().registerEvents(new ChestListener(), this);
             getServer().getPluginManager().registerEvents(new ChestInteractListener(), this);
             getServer().getPluginManager().registerEvents(new ChestBreakListener(), this);
-
             getCommand("chest").setExecutor(new ErisChest());
 
             // Register BarrelLocker

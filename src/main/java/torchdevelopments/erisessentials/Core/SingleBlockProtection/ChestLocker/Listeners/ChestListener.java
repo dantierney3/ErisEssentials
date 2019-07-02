@@ -32,11 +32,14 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.Plugin;
+
+import java.util.List;
 
 public class ChestListener implements Listener {
 
@@ -51,7 +54,7 @@ public class ChestListener implements Listener {
             Player p = e.getPlayer();
             Location loc = e.getBlockPlaced().getLocation();
 
-            String uuid = p.getUniqueId().toString();
+            String playerUUID = p.getUniqueId().toString();
 
             int x = loc.getBlockX();
             int y = loc.getBlockY();
@@ -64,9 +67,10 @@ public class ChestListener implements Listener {
 
             if(plugin.getConfig().contains(location))
             {
+
                 if(plugin.getConfig().get(location) == null)
                 {
-                    plugin.getConfig().set(location + ".owner",uuid);
+                    plugin.getConfig().set(location + ".owner",playerUUID);
                     plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
                     plugin.getConfig().set(location + ".isPublic", false);
                     plugin.saveConfig();
@@ -76,9 +80,15 @@ public class ChestListener implements Listener {
                     return;
                 }
             }
+            else if (checkNearbyBlocks(p,e))
+            {
+                e.setCancelled(true);
+                p.sendMessage(ChatColor.RED + "You're trying to place a chest next to a chest you don't own!");
+                return;
+            }
             else
             {
-                plugin.getConfig().set(location + ".owner",uuid);
+                plugin.getConfig().set(location + ".owner",playerUUID);
                 plugin.getConfig().set(location + ".ownerName", ChatColor.stripColor(p.getDisplayName()));
                 plugin.getConfig().set(location + ".isPublic", false);
                 plugin.saveConfig();
@@ -86,6 +96,57 @@ public class ChestListener implements Listener {
 
         }
 
+    }
+
+    private boolean checkNearbyBlocks(Player p, BlockPlaceEvent e)
+    {
+        // Integer is added to if there is a chest adjacent to the placed block not belonging to the player
+        int nearbyChestWrongOwner = 0;
+
+        // Get the blocks that are in adjacent blocks
+        Block posX = e.getBlockPlaced().getRelative(1,0,0);
+        Block posZ = e.getBlockPlaced().getRelative(0,0,1);
+        Block negX = e.getBlockPlaced().getRelative(-1,0,0);
+        Block negZ = e.getBlockPlaced().getRelative(0,0,-1);
+
+        // Add blocks to a list
+        Block[] nearbyBlocks = {posX, posZ, negX, negZ};
+
+        // Iterate through the list of adjacent blocks to check if one is a chest
+        for( Block block : nearbyBlocks)
+        {
+            // Get the block location
+            Location loc = block.getLocation();
+            int x = loc.getBlockX();
+            int y = loc.getBlockY();
+            int z = loc.getBlockZ();
+
+            String location = Integer.toString(x);
+            location += Integer.toString(y);
+            location += Integer.toString(z);
+            location = "chest." + location;
+
+            if(plugin.getConfig().contains(location))
+            {
+                String ownerUUID = plugin.getConfig().get(location + ".owner").toString();
+                String playerUUID = p.getUniqueId().toString();
+
+                if(!playerUUID.contentEquals(ownerUUID))
+                {
+                    nearbyChestWrongOwner ++;
+                }
+            }
+
+        }
+
+        if(nearbyChestWrongOwner > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }

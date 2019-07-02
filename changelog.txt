@@ -51,6 +51,7 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - Try-Catch blocks will now print a stack trace for easy issue reporting and fixing
 - Shulker Box Checks now check every variant of shulker box (16 colours + original)
 - Shulker box interaction will not tell you if the block is not a shulker box
+- Game saves upon the end of the MultiPlayerSleep events
 
 ### [Removed]
 - Old chest protection command classes
@@ -59,6 +60,7 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - The game day is no longer being kept at 0 due to multiplayer sleep
 - Chests cannot be broken by players who dont own the chest
 - Inventory blocks placed before plugin installation dont have a isPublic flag when the owner is set to a player
+- A player can no longer place a chest next to a chest they dont own to create a double chest to get access to the inventory
 
 
 ## 0.11.0 = 2019-06-26

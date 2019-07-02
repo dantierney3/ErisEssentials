@@ -74,6 +74,7 @@ public class MultiPlayerSleep implements Listener
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time add " + timeToAdd);
                         RainTask.weatherToRain();
                         ClearTask.weatherToClear();
+                        SaveTask.saveAll();
                     }
                 }
 

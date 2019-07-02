@@ -1,6 +1,8 @@
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask.class
+torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Commands\ErisChest.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask$1.class
+torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask$1.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestBreakListener.class
 torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerInventory.class
 torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
