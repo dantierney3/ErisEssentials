@@ -2,6 +2,7 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Single
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerBreakListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestBreakListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetOwner.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerPlaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listeners\HopperPlaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask.java
@@ -17,6 +18,7 @@ D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Single
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Fly\Fly.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\Util\Commands\Invisible\Invisibility.java
+D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\ClaimUnownedBlock.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Commands\ErisShulker.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Listener\BarrelPlaceListener.java
 D:\Git\ErisEssentials\src\main\java\torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Listeners\FurnaceInteractListener.java

@@ -5,6 +5,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,12 +29,11 @@ public class RemoveFriend {
                     if(plugin.getConfig().contains(location + ".friends"))
                     {
                         String friends = plugin.getConfig().get(location + ".friends").toString();
-                        List<String> friendsList = null;
+
                         String[] friendsArray = friends.split(",");
-                        for(String friend : friendsArray)
-                        {
-                            friendsList.add(friend);
-                        }
+
+                        ArrayList<String> friendsList = new ArrayList<>();
+
                         if(friendsList.contains(targetUUID))
                         {
                             friendsList.remove(targetUUID);

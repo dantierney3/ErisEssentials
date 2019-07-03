@@ -51,6 +51,7 @@ import torchdevelopments.erisessentials.Core.SingleBlockProtection.HopperLocker.
 import torchdevelopments.erisessentials.Core.SingleBlockProtection.ShulkerLocker.Commands.ErisShulker;
 import torchdevelopments.erisessentials.Core.SingleBlockProtection.ShulkerLocker.Listeners.ShulkerBreakListener;
 import torchdevelopments.erisessentials.Core.SingleBlockProtection.ShulkerLocker.Listeners.ShulkerInteractListener;
+import torchdevelopments.erisessentials.Core.SingleBlockProtection.ShulkerLocker.Listeners.ShulkerPlaceListener;
 import torchdevelopments.erisessentials.Core.Util.Commands.AFK.Afk;
 import torchdevelopments.erisessentials.Core.Util.Commands.Broadcast.Broadcast;
 import torchdevelopments.erisessentials.Core.Util.Commands.EnderChest.EnderChestCommand;
@@ -122,6 +123,7 @@ public final class ErisEssentials extends JavaPlugin{
             System.out.println("[ErisEssentials] Registering ShulkerLocker");
             getServer().getPluginManager().registerEvents(new ShulkerInteractListener(), this);
             getServer().getPluginManager().registerEvents(new ShulkerBreakListener(), this);
+            getServer().getPluginManager().registerEvents(new ShulkerPlaceListener(), this);
             getCommand("shulker").setExecutor(new ErisShulker());
 
             // Register Custom Commands

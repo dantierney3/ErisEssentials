@@ -42,6 +42,11 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 - Players can now change their Shulker Boxes to private
 - Players can now see the owner of a Shulker Box
 - Players can now give friend access to their Shulker Boxes
+- Players can now claim unprotected chests
+- Players can now claim unprotected barrels
+- Players can now claim unprotected hoppers
+- Players can now claim unprotected furnaces
+- Players can now claim unprotected shulker boxes
 
 ### [Changed]
 - Changed the command structure for chest protection

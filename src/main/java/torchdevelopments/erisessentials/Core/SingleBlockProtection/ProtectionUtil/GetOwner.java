@@ -13,7 +13,7 @@ public class GetOwner {
             String ownerName = plugin.getConfig().get(location + ".ownerName").toString();
 
 
-            p.sendMessage(ChatColor.BLUE + "That " + block + " to " + ChatColor.GOLD + ownerName);
+            p.sendMessage(ChatColor.BLUE + "That " + block + " belongs to " + ChatColor.GOLD + ownerName);
 
         }
     }

@@ -43,6 +43,7 @@ import java.util.List;
 import java.util.UUID;
 
 import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.AddFriend.addFriendToBlock;
+import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.ClaimUnownedBlock.claimBlock;
 import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.GetOwner.getBlockOwner;
 import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.GetTargetBlock.targetBlockLocation;
 import static torchdevelopments.erisessentials.Core.SingleBlockProtection.ProtectionUtil.RemoveFriend.removeFriendFromBlock;
@@ -103,6 +104,9 @@ public class ErisChest implements CommandExecutor {
                                 removeFriendFromBlock(p,location,block,plugin,args);
                                 break;
                             }
+                            break;
+                        case "claim":
+                            claimBlock(p,location,block,plugin);
                             break;
 
 
