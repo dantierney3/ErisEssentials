@@ -8,6 +8,7 @@ torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listene
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.class
 torchdevelopments\erisessentials\Core\ErisEssentials.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Commands\ErisHopper.class
+torchdevelopments\erisessentials\Core\ErisEconomy\EconomyManipulation\RemoveFunds.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Commands\ErisBarrel.class
 torchdevelopments\erisessentials\Core\Util\Commands\AFK\onPlayerMoveAFK.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerInteractListener.class
@@ -15,9 +16,11 @@ torchdevelopments\erisessentials\Core\Util\Commands\Fly\Fly.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Listener\BarrelInteractListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Listeners\FurnaceBreakListener.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep.class
+torchdevelopments\erisessentials\Core\ErisEconomy\EconomyManipulation\AddFunds.class
 torchdevelopments\erisessentials\Core\Util\Commands\AFK\Afk.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerPlaceListener.class
 torchdevelopments\erisessentials\Core\Util\Commands\Invisible\Invisibility.class
+torchdevelopments\erisessentials\Core\ErisEconomy\EconomyManipulation\GetFunds.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetPrivate.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Commands\ErisFurnace.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask.class
@@ -33,6 +36,8 @@ torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listene
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\GetOwner.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listeners\HopperPlaceListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\GetTargetBlock.class
+torchdevelopments\erisessentials\Core\ErisEconomy\Commands\ErisEconomy.class
+torchdevelopments\erisessentials\Core\ErisEconomy\EconomyManipulation\GiveFunds.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Listeners\FurnaceInteractListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestInteractListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Listener\BarrelBreakListener.class

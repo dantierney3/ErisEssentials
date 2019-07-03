@@ -32,6 +32,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import torchdevelopments.erisessentials.Core.ErisEconomy.Commands.ErisEconomy;
 import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Commands.ErisBarrel;
 import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener.BarrelBreakListener;
 import torchdevelopments.erisessentials.Core.SingleBlockProtection.BarrelLocker.Listener.BarrelInteractListener;
@@ -125,6 +126,10 @@ public final class ErisEssentials extends JavaPlugin{
             getServer().getPluginManager().registerEvents(new ShulkerBreakListener(), this);
             getServer().getPluginManager().registerEvents(new ShulkerPlaceListener(), this);
             getCommand("shulker").setExecutor(new ErisShulker());
+
+            // Register ErisEconomy
+            System.out.println("[ErisEssentials] Registering ErisEconomy");
+            getCommand("economy").setExecutor(new ErisEconomy());
 
             // Register Custom Commands
             System.out.println("[ErisEssentials] Registering Custom Commands");

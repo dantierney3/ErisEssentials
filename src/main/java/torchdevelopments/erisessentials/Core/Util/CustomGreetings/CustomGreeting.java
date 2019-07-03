@@ -34,19 +34,35 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.plugin.Plugin;
 
 public class CustomGreeting implements Listener {
 
     @EventHandler
     void onPlayerJoin(PlayerJoinEvent e)
     {
+        Plugin plugin = Bukkit.getPluginManager().getPlugin("ErisEssentials");
+
         Player player = e.getPlayer();
         e.setJoinMessage("Welcome back to the Server " + ChatColor.GOLD + player.getDisplayName());
+
+        String playerUUID = player.getUniqueId().toString();
 
         if(player.getUniqueId() == Bukkit.getPlayerUniqueId("Erisdar"))
         {
             player.setDisplayName(ChatColor.GOLD + player.getDisplayName()+ ChatColor.WHITE);
             player.setPlayerListName(ChatColor.GOLD + player.getPlayerListName() + ChatColor.WHITE);
+        }
+        if(!player.hasPlayedBefore())
+        {
+
+            plugin.getConfig().set("economy." + playerUUID, 0);
+            plugin.saveConfig();
+        }
+        else if(!plugin.getConfig().contains("economy." + playerUUID))
+        {
+            plugin.getConfig().set("economy." + playerUUID, 10.00);
+            plugin.saveConfig();
         }
     }
 }

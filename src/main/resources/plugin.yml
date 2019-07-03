@@ -26,5 +26,7 @@ commands:
     description: Commands to alter hopper protection
   shulker:
     description: Commands to alter shulker box protection
+  economy:
+    description:  Commands to use the built-in economy
   invisible:
       description: Make yourself invisible
