@@ -62,6 +62,7 @@ import torchdevelopments.erisessentials.Core.Util.Commands.PlayerInventory.ViewP
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomFarewell;
 import torchdevelopments.erisessentials.Core.Util.CustomGreetings.CustomGreeting;
 import torchdevelopments.erisessentials.Core.Util.MultiPlayerSleep.MultiPlayerSleep;
+import torchdevelopments.erisessentials.Core.Util.RandomOres.RandomOres;
 
 public final class ErisEssentials extends JavaPlugin{
 
@@ -130,6 +131,13 @@ public final class ErisEssentials extends JavaPlugin{
             // Register ErisEconomy
             System.out.println("[ErisEssentials] Registering ErisEconomy");
             getCommand("economy").setExecutor(new ErisEconomy());
+
+            // Register ErisShops
+            System.out.println("[ErisEssentials] Registering ErisShops");
+
+            // Register Random Ores
+            System.out.println("[ErisEssentials] Registering Random Ores");
+            getServer().getPluginManager().registerEvents(new RandomOres(), this);
 
             // Register Custom Commands
             System.out.println("[ErisEssentials] Registering Custom Commands");

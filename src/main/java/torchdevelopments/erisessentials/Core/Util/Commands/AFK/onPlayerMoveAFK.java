@@ -50,7 +50,7 @@ public class onPlayerMoveAFK implements Listener {
         Player player = e.getPlayer();
         if(listAFK.contains(player)){
             e.setCancelled(true);
-            if (i >= 10)
+            if (i >= 50)
             {
                 player.sendMessage(ChatColor.RED + "You are currently AFK!");
                 i = 0;

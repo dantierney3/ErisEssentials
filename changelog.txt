@@ -12,6 +12,20 @@ The versions will run in the following format:
 When referring to ticks, it means game ticks (20 ticks per second), not redstone ticks (10 ticks per second).
 
 ----------------------------
+## 0.3.0 - 2019-07-12
+
+### [Added]
+- Added a 5% chance that stone blocks will drop a random ore or gem when mined
+
+### [Changed]
+- Chances of ore or gem type drops based on value of item (e.g. Diamond has a 1/50 chance of being dropped)
+- Number of movement attempts whilst AFK before reminder message is sent to the AFK player
+
+### [Removed]
+
+### [Fixed]
+
+
 ## 0.2.0 - 2019-06-29
 
 ### [Added] 

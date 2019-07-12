@@ -44,6 +44,7 @@ torchdevelopments\erisessentials\Core\SingleBlockProtection\BarrelLocker\Listene
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\AddFriend.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listeners\ShulkerBreakListener.class
 torchdevelopments\erisessentials\Core\Util\Commands\Broadcast\Broadcast.class
+torchdevelopments\erisessentials\Core\Util\RandomOres\RandomOres.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Listeners\FurnacePlaceListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetOwner.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Commands\ErisShulker.class
