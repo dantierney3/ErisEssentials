@@ -4,6 +4,7 @@ torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask$1.class
 torchdevelopments\erisessentials\Core\Util\Commands\PlayerInventory\ViewPlayerInventory.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\MultiPlayerSleep$1.class
 torchdevelopments\erisessentials\Core\Util\Commands\EnderChest\EnderChestCommand.class
+torchdevelopments\erisessentials\Core\ErisEconomy\Shops\ShopCommands\ShopCommands.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\HopperLocker\Listeners\HopperBreakListener.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\RainTask.class
 torchdevelopments\erisessentials\Core\ErisEssentials.class
@@ -22,10 +23,12 @@ torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Listen
 torchdevelopments\erisessentials\Core\Util\Commands\Invisible\Invisibility.class
 torchdevelopments\erisessentials\Core\ErisEconomy\EconomyManipulation\GetFunds.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetPrivate.class
+torchdevelopments\erisessentials\Core\ErisEconomy\Shops\ShopInteractListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Commands\ErisFurnace.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\SaveTask.class
 torchdevelopments\erisessentials\Core\Util\MultiPlayerSleep\ClearTask$1.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetPublic.class
+torchdevelopments\erisessentials\Core\ErisEconomy\Shops\Controller\CheckOwner.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestBreakListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\RemoveFriend.class
 torchdevelopments\erisessentials\Core\Util\CustomGreetings\CustomGreeting.class
@@ -48,5 +51,6 @@ torchdevelopments\erisessentials\Core\Util\RandomOres\RandomOres.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\FurnaceLocker\Listeners\FurnacePlaceListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\SetOwner.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ShulkerLocker\Commands\ErisShulker.class
+torchdevelopments\erisessentials\Core\ErisEconomy\Shops\Controller\CreateShop.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ChestLocker\Listeners\ChestListener.class
 torchdevelopments\erisessentials\Core\SingleBlockProtection\ProtectionUtil\ClaimUnownedBlock.class

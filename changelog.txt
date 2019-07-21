@@ -16,6 +16,7 @@ When referring to ticks, it means game ticks (20 ticks per second), not redstone
 
 ### [Added]
 - Added a 5% chance that stone blocks will drop a random ore or gem when mined
+- CheckOwner class to check if a player is the owner of a chest before creating a shop
 
 ### [Changed]
 - Chances of ore or gem type drops based on value of item (e.g. Diamond has a 1/50 chance of being dropped)
